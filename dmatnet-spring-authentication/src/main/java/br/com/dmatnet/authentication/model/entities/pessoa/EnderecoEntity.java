@@ -1,4 +1,4 @@
-package br.com.dmatnetauthentication.model.entities.pessoaEntity;
+package br.com.dmatnet.authentication.model.entities.pessoa;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -11,7 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import br.com.dmatnetauthentication.model.entities.pessoaEntity.cidade.CidadeEntity;
+import br.com.dmatnet.authentication.model.entities.pessoa.cidade.CidadeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -1,4 +1,4 @@
-package br.com.dmatnetauthentication.model.entities.pessoaEntity.cidade;
+package br.com.dmatnet.authentication.model.entities.pessoa.cidade;
 
 import java.io.Serializable;
 import java.util.List;

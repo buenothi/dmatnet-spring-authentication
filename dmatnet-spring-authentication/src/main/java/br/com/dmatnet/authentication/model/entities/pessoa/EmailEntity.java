@@ -1,4 +1,4 @@
-package br.com.dmatnetauthentication.model.entities.pessoaEntity;
+package br.com.dmatnet.authentication.model.entities.pessoa;
 
 import java.io.Serializable;
 

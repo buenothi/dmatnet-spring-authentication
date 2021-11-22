@@ -1,4 +1,4 @@
-package br.com.dmatnetauthentication.config.security;
+package br.com.dmatnet.authentication.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
