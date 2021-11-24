@@ -1,4 +1,4 @@
-package br.com.dmatnet.authentication.model.entities.pessoa.pessoaFisica;
+package br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class AbstractPessoaFisicaEntity extends AbstractPessoaEntity implements Serializable {
+public class AbstractPessoaFisicaTO extends AbstractPessoaEntity implements Serializable {
 
 	private int genero;
 	
@@ -27,7 +27,7 @@ public class AbstractPessoaFisicaEntity extends AbstractPessoaEntity implements 
 	
 	private int estadoCivil;
 	
-	private PessoaFisicaDocumentosEntity documentosPessoais;
+	private PessoaFisicaDocumentosTO documentosPessoais;
 	
 	@Temporal(TemporalType.DATE)
 	private Date dataNascimento;
