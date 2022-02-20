@@ -22,8 +22,6 @@ import lombok.NoArgsConstructor;
 public class Perfil implements Serializable, GrantedAuthority {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
 	private String nome;
 	
 	private static final long serialVersionUID = 2938086839928013787L;
