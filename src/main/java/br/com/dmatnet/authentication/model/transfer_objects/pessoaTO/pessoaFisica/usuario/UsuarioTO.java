@@ -11,6 +11,9 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -20,10 +23,20 @@ import lombok.ToString;
 public class UsuarioTO extends AbstractPessoaFisicaEntity implements Serializable {
 
 	private static final long serialVersionUID = 8217011121551586768L;
+
+	@NotNull
+	@Min(3)
 	private String login;
+
+	@NotNull
+	@Min(3)
 	private String senha;
+
 	private Long idUsuarioPai;
+
+	@NotNull
 	private boolean ativo;
+
 	private List<PerfilTO> perfis;
 	
 }

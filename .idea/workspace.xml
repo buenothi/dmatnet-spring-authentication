@@ -4,16 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Correção de testes e configuração para o IntelliJ">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="finalização da configuração do spring security">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy-datasource.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_bean_validators_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_boot_starter_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_data_rest_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_oas_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_models_2_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.jpb/persistence-units.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_3_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/config/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/config/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/Perfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/Perfil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/repository/UsuarioRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/config/SpringSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/config/SpringSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/Perfil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/Perfil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/repository/UsuarioRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/controller/UsuarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO$UsuarioTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO$UsuarioTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/service/UsuarioService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/dmatnet-spring-authentication-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/dmatnet-spring-authentication-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/dmatnet-spring-authentication-1.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/dmatnet-spring-authentication-1.0.jar.original" afterDir="false" />
@@ -38,6 +51,22 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.5.6/spring-data-commons-2.5.6-sources.jar!/org/springframework/data/repository/PagingAndSortingRepository.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -96,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645197761074</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="finalização da configuração do spring security">
+      <created>1645318227624</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1645318227624</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,6 +148,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correção de testes e configuração para o IntelliJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correção de testes e configuração para o IntelliJ" />
+    <MESSAGE value="finalização da configuração do spring security" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalização da configuração do spring security" />
   </component>
 </project>
