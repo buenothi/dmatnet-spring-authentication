@@ -4,34 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="finalização da configuração do spring security">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy-datasource.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_bean_validators_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_boot_starter_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_data_rest_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_oas_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_models_2_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.jpb/persistence-units.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_3_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Criação dos métodos GET, POST e DELETE do controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/repository/UsuarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/controller/UsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO$UsuarioTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO$UsuarioTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/service/UsuarioService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dmatnet-spring-authentication-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/dmatnet-spring-authentication-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dmatnet-spring-authentication-1.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/dmatnet-spring-authentication-1.0.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.dmatnet.authentication.ApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.dmatnet.authentication.ApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.dmatnet.authentication.ApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.dmatnet.authentication.ApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/AbstractPessoaFisicaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/AbstractPessoaFisicaEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/AbstractPessoaFisicaEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/AbstractPessoaFisicaEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645318227624</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Criação dos métodos GET, POST e DELETE do controller">
+      <created>1645501247516</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1645501247516</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +134,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correção de testes e configuração para o IntelliJ" />
     <MESSAGE value="finalização da configuração do spring security" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalização da configuração do spring security" />
+    <MESSAGE value="Criação dos métodos GET, POST e DELETE do controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criação dos métodos GET, POST e DELETE do controller" />
   </component>
 </project>

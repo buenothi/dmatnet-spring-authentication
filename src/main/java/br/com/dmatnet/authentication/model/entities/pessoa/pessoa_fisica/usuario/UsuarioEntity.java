@@ -1,28 +1,21 @@
 package br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario;
 
-import java.io.Serializable;
-import java.util.Collection;
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
 import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.AbstractPessoaFisicaEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name="tbl_usuarios")
 @Data
 @NoArgsConstructor
-@EqualsAndHashCode(callSuper = false)
 public class UsuarioEntity extends AbstractPessoaFisicaEntity implements Serializable, UserDetails {
 
 	@Column(unique = true)
