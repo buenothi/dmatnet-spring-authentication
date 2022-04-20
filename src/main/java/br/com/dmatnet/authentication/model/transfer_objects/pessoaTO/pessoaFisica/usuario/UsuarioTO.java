@@ -1,18 +1,14 @@
 package br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica.usuario;
 
-import java.io.Serializable;
-import java.util.List;
-
-import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.AbstractPessoaFisicaEntity;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica.AbstractPessoaFisicaTO;
+import lombok.*;
 
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.io.Serial;
+import java.io.Serializable;
+import java.util.List;
 
 @Data
 @Builder
@@ -20,21 +16,22 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode(callSuper = false)
-public class UsuarioTO extends AbstractPessoaFisicaEntity implements Serializable {
+public class UsuarioTO extends AbstractPessoaFisicaTO implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 8217011121551586768L;
 
-	@NotNull
+	@NotEmpty
 	@Min(3)
 	private String login;
 
-	@NotNull
+	@NotEmpty
 	@Min(3)
 	private String senha;
 
 	private Long idUsuarioPai;
 
-	@NotNull
+	@NotEmpty
 	private boolean ativo;
 
 	private List<PerfilTO> perfis;

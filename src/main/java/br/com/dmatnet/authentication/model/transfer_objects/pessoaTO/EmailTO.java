@@ -1,8 +1,11 @@
 package br.com.dmatnet.authentication.model.transfer_objects.pessoaTO;
 
+import java.io.Serial;
 import java.io.Serializable;
+import java.util.Objects;
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,9 +25,14 @@ public class EmailTO implements Serializable, Cloneable, Comparable<EmailTO> {
 	private long idEmail;
 
 	@Email
+	@NotEmpty
 	private String nomeEmail;
+
+	@NotEmpty
 	private boolean isEmailPrincipal;
 	private EmailTipoTO tipoEmail;
+
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	public void setNomeEmail(String nomeEmail) {
@@ -38,7 +46,7 @@ public class EmailTO implements Serializable, Cloneable, Comparable<EmailTO> {
 
 	@Override
 	public int compareTo(EmailTO outroEmail) {
-		if (outroEmail.getNomeEmail() == this.nomeEmail) {
+		if (Objects.equals(outroEmail.getNomeEmail(), this.nomeEmail)) {
 			return 0;
 		}
 		return -1;

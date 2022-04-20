@@ -2,11 +2,18 @@ package br.com.dmatnet.authentication.controller;
 
 import br.com.dmatnet.authentication.model.converter.UsuarioConverter;
 import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.UsuarioEntity;
+import br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica.usuario.LoginTO;
+import br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica.usuario.TokenDTO;
 import br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica.usuario.UsuarioTO;
+import br.com.dmatnet.authentication.service.TokenService;
 import br.com.dmatnet.authentication.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -18,10 +25,16 @@ import java.util.Optional;
 public class UsuarioController {
 
     @Autowired
-    UsuarioService usuarioService;
+    private UsuarioService usuarioService;
 
     @Autowired
-    UsuarioConverter usuarioConverter;
+    private UsuarioConverter usuarioConverter;
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+    @Autowired
+    private TokenService tokenService;
 
     @PostMapping
     @Transactional
@@ -31,11 +44,24 @@ public class UsuarioController {
 
         var uri = ServletUriComponentsBuilder
                 .fromCurrentRequest()
-                .path(Long.toString(usuarioCriado.getIdPessoa()))
+                .path("/" + (usuarioCriado.getIdPessoa()))
                 .build()
                 .toUri();
 
         return ResponseEntity.created(uri).body(null);
+    }
+
+    @PostMapping("/auth")
+    @Transactional
+    public ResponseEntity<TokenDTO> autenticar(@RequestBody @Validated LoginTO login) {
+
+        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(login.getLogin(), login.getSenha());
+
+        Authentication authentication = authenticationManager.authenticate(usernamePasswordAuthenticationToken);
+
+        String token = tokenService.generateToken(authentication);
+
+        return ResponseEntity.ok(TokenDTO.builder().type("Bearer").token(token).build());
     }
 
     @DeleteMapping(path = "/{id}", consumes = {"application/json"})

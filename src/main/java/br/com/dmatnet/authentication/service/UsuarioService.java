@@ -21,13 +21,13 @@ public class UsuarioService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        UsuarioEntity usuario = usuarioRepository.findByLogin(username);
+        Optional<UsuarioEntity> usuario = usuarioRepository.findByLogin(username);
 
-        if (usuario == null) {
+        if (usuario.isEmpty()) {
             throw new UsernameNotFoundException("Usuario não encontrado!");
         }
 
-        return usuario;
+        return usuario.get();
     }
 
     public UsuarioEntity save(UsuarioEntity usuario) {
@@ -42,7 +42,7 @@ public class UsuarioService implements UserDetailsService {
         return usuarioRepository.findById(id);
     }
 
-    public Optional<UsuarioEntity> listUsuariosByUsuarioPai (Long idUsuarioPai){
+    public Optional<UsuarioEntity> listUsuariosByUsuarioPai(Long idUsuarioPai) {
         return usuarioRepository.findById(idUsuarioPai);
     }
 

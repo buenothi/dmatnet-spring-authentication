@@ -1,25 +1,20 @@
 package br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica;
 
-import java.io.Serializable;
-import java.util.Date;
-
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
-import br.com.dmatnet.authentication.model.entities.pessoa.AbstractPessoaEntity;
+import br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.AbstractPessoaTO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@MappedSuperclass
-@Inheritance(strategy=InheritanceType.JOINED)
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import java.io.Serial;
+import java.io.Serializable;
+import java.util.Date;
+
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class AbstractPessoaFisicaTO extends AbstractPessoaEntity implements Serializable {
+public class AbstractPessoaFisicaTO extends AbstractPessoaTO implements Serializable {
 
 	private int genero;
 	
@@ -32,5 +27,6 @@ public class AbstractPessoaFisicaTO extends AbstractPessoaEntity implements Seri
 	@Temporal(TemporalType.DATE)
 	private Date dataNascimento;
 	
+	@Serial
 	private static final long serialVersionUID = 1L;
 }

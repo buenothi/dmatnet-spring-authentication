@@ -6,11 +6,15 @@ import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface UsuarioRepository extends PagingAndSortingRepository<UsuarioEntity, Long>{
 
-    UsuarioEntity findByLogin(String login);
+    @Override
+    Optional<UsuarioEntity> findById(Long aLong);
+
+    Optional<UsuarioEntity> findByLogin(String login);
 
     List<UsuarioEntity> findByIdUsuarioPai(Long idUsuarioPai);
 

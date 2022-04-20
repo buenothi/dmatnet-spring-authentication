@@ -1,5 +1,6 @@
 package br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,6 +11,8 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.validation.constraints.NotEmpty;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -18,7 +21,9 @@ import lombok.ToString;
 @EqualsAndHashCode
 public class PessoaFisicaDocumentosTO implements Serializable, Cloneable {
 
+	@Serial
 	private static final long serialVersionUID = 8729299174885632883L;
+
 	// registro de identificação civil (para atendimento do eSocial)
 	private Long numRic;
 	private String ricOrgExpedidor;
@@ -26,6 +31,8 @@ public class PessoaFisicaDocumentosTO implements Serializable, Cloneable {
 	private String numRG;
 	private String rgOrgExpedidor;
 	private Date rgDataExpedicao;
+
+	@NotEmpty
 	private Long numCPF;
 	private Long numRNE;
 	private String rneOrgExpedidor;
