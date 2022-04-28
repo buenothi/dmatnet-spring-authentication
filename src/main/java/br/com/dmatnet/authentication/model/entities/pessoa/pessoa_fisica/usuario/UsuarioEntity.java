@@ -1,16 +1,14 @@
 package br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario;
 
+import br.com.dmatnet.authentication.model.entities.pessoa.EmailEntity;
 import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.AbstractPessoaFisicaEntity;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Table(name="tbl_usuarios")
@@ -18,10 +16,27 @@ import java.util.List;
 @NoArgsConstructor
 public class UsuarioEntity extends AbstractPessoaFisicaEntity implements Serializable, UserDetails {
 
+	public UsuarioEntity(
+			String nome,
+			Date dataNascimento,
+			Set<EmailEntity> emails,
+			String login,
+			String senha,
+			boolean ativo,
+			List<Perfil> perfis) {
+		super.setNome(nome);
+		super.setDataNascimento(dataNascimento);
+		super.setEmails(emails);
+		this.login = login;
+		this.senha = senha;
+		this.ativo = ativo;
+		this.perfis = perfis;
+	}
+
 	@Column(unique = true)
 	private String login;
 	private String senha;
-	private Long idUsuarioPai;
+	private UUID idUsuarioPai;
 	private boolean ativo;
 	
 	@ManyToMany(fetch = FetchType.EAGER)

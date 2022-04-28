@@ -3,6 +3,7 @@ package br.com.dmatnet.authentication.model.entities.pessoa;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
+import java.util.UUID;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -32,8 +33,8 @@ import lombok.NoArgsConstructor;
 public abstract class AbstractPessoaEntity implements Serializable {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long idPessoa;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private UUID idPessoa;
 
 	private String nome;
 

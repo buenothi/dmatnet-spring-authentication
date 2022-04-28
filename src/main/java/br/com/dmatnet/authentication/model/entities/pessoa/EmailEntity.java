@@ -11,16 +11,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Pattern;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Table(name = "tbl_email")
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 @EqualsAndHashCode(exclude = {"tipoEmail", "isEmailPrincipal"})
 public class EmailEntity implements Serializable, Cloneable, Comparable<EmailEntity> {
 
@@ -29,19 +26,14 @@ public class EmailEntity implements Serializable, Cloneable, Comparable<EmailEnt
 	private long idEmail;
 
 	@Pattern(regexp = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
-	private String nomeEmail;
+	@NonNull
+	private String email;
 
+	@NonNull
 	private boolean isEmailPrincipal;
 
-	@ManyToOne
-	@JoinColumn(name = "EMAILTIPO_ID")
-	private EmailTipoEntity tipoEmail;
 	private static final long serialVersionUID = 1L;
 
-	public void setNomeEmail(String nomeEmail) {
-		this.nomeEmail = nomeEmail.toUpperCase();
-	}
-	
 	@Override
 	protected EmailEntity clone() throws CloneNotSupportedException {
 		return (EmailEntity) super.clone();
@@ -49,7 +41,7 @@ public class EmailEntity implements Serializable, Cloneable, Comparable<EmailEnt
 
 	@Override
 	public int compareTo(EmailEntity outroEmail) {
-		if (outroEmail.getNomeEmail() == this.nomeEmail) {
+		if (outroEmail.getEmail() == this.email) {
 			return 0;
 		}
 		return -1;
