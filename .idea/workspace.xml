@@ -4,35 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Configuração do Spring Security e do Swagger">
+    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Configuração do Actuator">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_3_0_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/AbstractPessoaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/AbstractPessoaEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/EmailEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/EmailEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/EmailTipoEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/Perfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/Perfil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/controller/UsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/AbstractPessoaEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/AbstractPessoaEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/EmailEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/EmailEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/EmailTipoEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/Perfil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/Perfil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/AbstractPessoaTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/AbstractPessoaTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTO$EmailTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTO$EmailTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/AbstractPessoaFisicaTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/AbstractPessoaFisicaTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/PessoaFisicaDocumentosTO$PessoaFisicaDocumentosTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/PessoaFisicaDocumentosTO$PessoaFisicaDocumentosTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/PessoaFisicaDocumentosTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/PessoaFisicaDocumentosTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO$UsuarioTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO$UsuarioTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/service/TokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/service/TokenService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +71,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "settings.editor.selected.configurable": "advanced.settings"
   }
@@ -175,8 +154,19 @@
       <option name="project" value="LOCAL" />
       <updated>1650473025117</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Configuração do Actuator">
+      <created>1651152573911</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651152573911</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -195,6 +185,7 @@
     <MESSAGE value="Criação dos métodos GET, POST e DELETE do controller" />
     <MESSAGE value="Ajustes de hierarquia em UsuarioEntity e AbstractPessoaFisicaEntity" />
     <MESSAGE value="Configuração do Spring Security e do Swagger" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configuração do Spring Security e do Swagger" />
+    <MESSAGE value="Configuração do Actuator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configuração do Actuator" />
   </component>
 </project>
