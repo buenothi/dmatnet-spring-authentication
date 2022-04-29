@@ -1,5 +1,6 @@
 package br.com.dmatnet.authentication.model.entities.pessoa;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
@@ -16,9 +17,7 @@ import lombok.*;
 @Table(name = "tbl_telefone")
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
-@EqualsAndHashCode
 public class TelefoneEntity implements Serializable, Cloneable, Comparable<TelefoneEntity> {
 
 	@Id
@@ -29,6 +28,8 @@ public class TelefoneEntity implements Serializable, Cloneable, Comparable<Telef
 	@ManyToOne
 	@JoinColumn(name = "TELEFONETIPO_ID")
 	private TelefoneTipoEntity tipoTelefone;
+
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	@Override
@@ -38,7 +39,7 @@ public class TelefoneEntity implements Serializable, Cloneable, Comparable<Telef
 
 	@Override
 	public int compareTo(TelefoneEntity outroTelefone) {
-		if(outroTelefone.getNumeroTelefone() == this.getNumeroTelefone()) {		
+		if(outroTelefone.getNumeroTelefone().equals(this.getNumeroTelefone())) {
 			return 0;
 		}
 		return -1;

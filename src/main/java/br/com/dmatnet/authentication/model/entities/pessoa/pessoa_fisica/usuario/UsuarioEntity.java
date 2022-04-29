@@ -7,6 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.*;
 
@@ -43,7 +44,8 @@ public class UsuarioEntity extends AbstractPessoaFisicaEntity implements Seriali
 	
 	@ManyToMany(fetch = FetchType.EAGER)
 	private List<PerfilEntity> perfis;
-	
+
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	@Override

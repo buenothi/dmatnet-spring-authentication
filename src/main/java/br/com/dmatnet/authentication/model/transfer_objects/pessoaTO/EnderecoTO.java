@@ -1,5 +1,6 @@
 package br.com.dmatnet.authentication.model.transfer_objects.pessoaTO;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -32,7 +33,8 @@ public class EnderecoTO implements Serializable, Cloneable {
 	private CidadeEntity cidade;
 	private String logradouroTipo;
 	private String logradouroPais;
-	private static final long serialVersionUID = 1L;
+	@Serial
+    private static final long serialVersionUID = 1L;
 
 	public void setLogradouroNome(String logradouroNome) {
 		this.logradouroNome = logradouroNome.toUpperCase();

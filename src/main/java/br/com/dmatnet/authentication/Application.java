@@ -52,7 +52,7 @@ public class Application {
         UsuarioEntity usuarioMaster = new UsuarioEntity(
                 "Thiago Gonçalves Bueno",
                 Date.from(LocalDate.of(1983, 2, 16).atStartOfDay(ZoneId.systemDefault()).toInstant()),
-                new HashSet<EmailEntity>(Collections.singleton(
+                new HashSet<>(Collections.singleton(
                         new EmailEntity(
                                 "bueno_thiago@outlook.com",
                                 true)
@@ -60,7 +60,7 @@ public class Application {
                 "thiago_bueno",
                 passwordEncoder.encode("Tgb#6878"),
                 true,
-                new ArrayList<PerfilEntity>(Collections.singleton(perfilMaster))
+                new ArrayList<>(Collections.singleton(perfilMaster))
         );
 
         try {

@@ -1,5 +1,6 @@
 package br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -52,6 +53,7 @@ public class PessoaFisicaDocumentosEntity implements Serializable, Cloneable {
 
 	private String cnhCategoria;
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	@Override

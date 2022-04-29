@@ -1,5 +1,6 @@
 package br.com.dmatnet.authentication.model.transfer_objects.pessoaTO;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import lombok.AllArgsConstructor;
@@ -19,6 +20,7 @@ public class EmailTipoTO implements Serializable {
 
 	private long idEmailTipo;
 	private String tipo;
-	private static final long serialVersionUID = 1L;
+	@Serial
+    private static final long serialVersionUID = 1L;
 
 }

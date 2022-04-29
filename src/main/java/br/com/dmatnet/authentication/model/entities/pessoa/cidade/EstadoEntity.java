@@ -1,5 +1,9 @@
 package br.com.dmatnet.authentication.model.entities.pessoa.cidade;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -16,6 +20,8 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "tbl_estados")
+@Getter
+@Setter
 @NamedQueries({
 		@NamedQuery(name = "Estados.listarTodasCidadesPorEstado", 
 				query = "SELECT cid FROM CidadeEntity cid WHERE cid.estado=:estado")})
@@ -36,76 +42,11 @@ public class EstadoEntity implements Serializable {
 	@OneToMany(mappedBy = "estado")
 	private List<CidadeEntity> cidades;
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	public EstadoEntity() {
 		super();
-	}
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getEstadoSigla() {
-		return estadoSigla;
-	}
-
-	public void setEstadoSigla(String estadoSigla) {
-		this.estadoSigla = estadoSigla;
-	}
-
-	public String getEstadoNome() {
-		return estadoNome;
-	}
-
-	public void setEstadoNome(String estadoNome) {
-		this.estadoNome = estadoNome;
-	}
-
-	@Override
-	public String toString() {
-		return estadoSigla;
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((cidades == null) ? 0 : cidades.hashCode());
-		result = prime * result + ((estadoNome == null) ? 0 : estadoNome.hashCode());
-		result = prime * result + ((estadoSigla == null) ? 0 : estadoSigla.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		EstadoEntity other = (EstadoEntity) obj;
-		if (cidades == null) {
-			if (other.cidades != null)
-				return false;
-		} else if (!cidades.equals(other.cidades))
-			return false;
-		if (estadoNome == null) {
-			if (other.estadoNome != null)
-				return false;
-		} else if (!estadoNome.equals(other.estadoNome))
-			return false;
-		if (estadoSigla == null) {
-			if (other.estadoSigla != null)
-				return false;
-		} else if (!estadoSigla.equals(other.estadoSigla))
-			return false;
-		return true;
 	}
 
 }

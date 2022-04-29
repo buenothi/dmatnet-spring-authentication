@@ -1,5 +1,6 @@
 package br.com.dmatnet.authentication.model.entities.pessoa.cidade;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
@@ -28,7 +29,8 @@ public class CidadeEntity implements Serializable {
 	@JoinColumn(name="estado_ID")
 	private EstadoEntity estado;
 	
-	private static final long serialVersionUID = 1L;
+	@Serial
+    private static final long serialVersionUID = 1L;
 
 	public CidadeEntity() {
 		super();
@@ -87,11 +89,8 @@ public class CidadeEntity implements Serializable {
 		} else if (!cidadeNome.equals(other.cidadeNome))
 			return false;
 		if (estado == null) {
-			if (other.estado != null)
-				return false;
-		} else if (!estado.equals(other.estado))
-			return false;
-		return true;
+			return other.estado == null;
+		} else return estado.equals(other.estado);
 	}
 
 }

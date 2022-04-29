@@ -83,9 +83,9 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.5.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.5.6" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.22" level="project" />
-    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.26" level="project" />
-    <orderEntry type="library" name="Maven: org.modelmapper.extensions:modelmapper-spring:2.4.2" level="project" />
-    <orderEntry type="library" name="Maven: org.modelmapper:modelmapper:2.4.2" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.28" level="project" />
+    <orderEntry type="library" name="Maven: org.modelmapper.extensions:modelmapper-spring:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.modelmapper:modelmapper:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger2:3.0.0" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-spi:3.0.0" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-core:3.0.0" level="project" />

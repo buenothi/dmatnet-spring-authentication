@@ -1,5 +1,6 @@
 package br.com.dmatnet.authentication.model.entities.pessoa;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
@@ -14,9 +15,7 @@ import lombok.*;
 @Table(name = "tbl_Logradouro")
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
-@EqualsAndHashCode
 public class EnderecoTipoEntity implements Serializable {
 
 	@Id
@@ -27,6 +26,7 @@ public class EnderecoTipoEntity implements Serializable {
 
 	private String nomeLogradouro;
 
-	private static final long serialVersionUID = 1L;
+	@Serial
+    private static final long serialVersionUID = 1L;
 
 }

@@ -1,5 +1,6 @@
 package br.com.dmatnet.authentication.model.transfer_objects.cidadesTO;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -22,6 +23,7 @@ public class EstadoTO implements Serializable {
 	private String estadoSigla;
 	private String estadoNome;
 	private List<CidadeTO> cidades;
-	private static final long serialVersionUID = 1L;
+	@Serial
+    private static final long serialVersionUID = 1L;
 
 }

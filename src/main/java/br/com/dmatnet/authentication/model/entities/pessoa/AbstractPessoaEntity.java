@@ -1,5 +1,6 @@
 package br.com.dmatnet.authentication.model.entities.pessoa;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
@@ -25,10 +26,8 @@ import lombok.*;
 @Inheritance(strategy = InheritanceType.JOINED)
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(exclude = { "enderecos", "telefones", "emails", "dataCadastroPessoa"})
 public abstract class AbstractPessoaEntity implements Serializable {
 
 	@Id
@@ -52,6 +51,7 @@ public abstract class AbstractPessoaEntity implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataCadastroPessoa;
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	@Override

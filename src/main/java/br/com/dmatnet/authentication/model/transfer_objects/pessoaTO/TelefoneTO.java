@@ -1,5 +1,6 @@
 package br.com.dmatnet.authentication.model.transfer_objects.pessoaTO;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import javax.validation.constraints.NotNull;
@@ -24,7 +25,8 @@ public class TelefoneTO implements Serializable, Cloneable, Comparable<TelefoneT
 	@NotNull
 	private String numeroTelefone;
 	private TelefoneTipoTO tipoTelefone;
-	private static final long serialVersionUID = 1L;
+	@Serial
+    private static final long serialVersionUID = 1L;
 	
 	public TelefoneTO clone() throws CloneNotSupportedException {
 		return (TelefoneTO) super.clone();
@@ -32,7 +34,7 @@ public class TelefoneTO implements Serializable, Cloneable, Comparable<TelefoneT
 
 	@Override
 	public int compareTo(TelefoneTO outroTelefone) {
-		if(outroTelefone.getNumeroTelefone() == this.getNumeroTelefone()) {		
+		if(outroTelefone.getNumeroTelefone().equals(this.getNumeroTelefone())) {
 			return 0;
 		}
 		return -1;

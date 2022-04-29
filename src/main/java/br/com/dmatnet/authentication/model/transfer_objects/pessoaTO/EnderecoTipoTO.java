@@ -1,5 +1,6 @@
 package br.com.dmatnet.authentication.model.transfer_objects.pessoaTO;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import lombok.AllArgsConstructor;
@@ -20,6 +21,7 @@ public class EnderecoTipoTO implements Serializable {
 	private int idNomeLogradouro;
 	private String siglaLogradouro;
 	private String nomeLogradouro;
-	private static final long serialVersionUID = 1L;
+	@Serial
+    private static final long serialVersionUID = 1L;
 
 }

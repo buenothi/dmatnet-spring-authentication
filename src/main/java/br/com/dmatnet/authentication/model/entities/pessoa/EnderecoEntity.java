@@ -1,5 +1,6 @@
 package br.com.dmatnet.authentication.model.entities.pessoa;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -18,10 +19,8 @@ import lombok.*;
 @Table(name = "tbl_endereco")
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode
 public class EnderecoEntity implements Serializable, Cloneable {
 
 	@Id
@@ -48,7 +47,8 @@ public class EnderecoEntity implements Serializable, Cloneable {
 	private String logradouroTipo;
 	private String logradouroPais;
 
-	private static final long serialVersionUID = 1L;
+	@Serial
+    private static final long serialVersionUID = 1L;
 
 	public void setLogradouroNome(String logradouroNome) {
 		this.logradouroNome = logradouroNome.toUpperCase();
