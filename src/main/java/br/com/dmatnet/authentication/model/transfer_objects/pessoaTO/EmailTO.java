@@ -30,7 +30,6 @@ public class EmailTO implements Serializable, Cloneable, Comparable<EmailTO> {
 
 	@NotEmpty
 	private boolean isEmailPrincipal;
-	private EmailTipoTO tipoEmail;
 
 	@Serial
 	private static final long serialVersionUID = 1L;
