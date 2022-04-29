@@ -26,7 +26,7 @@ public class TokenService {
         Date now = new Date();
         Date exp = new Date(now.getTime() + Long.parseLong(expiration));
 
-        return Jwts.builder().setIssuer("IRS").setSubject(usuario.getLogin()).setIssuedAt(new Date())
+        return Jwts.builder().setIssuer("DMATNET").setSubject(usuario.getLogin()).setIssuedAt(new Date())
                 .setExpiration(exp).signWith(SignatureAlgorithm.HS256, secret).compact();
     }
 

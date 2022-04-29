@@ -8,15 +8,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "tbl_Logradouro")
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @EqualsAndHashCode
 public class EnderecoTipoEntity implements Serializable {

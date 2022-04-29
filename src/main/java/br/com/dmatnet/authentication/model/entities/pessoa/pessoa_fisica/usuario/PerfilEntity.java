@@ -1,30 +1,29 @@
 package br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario;
 
 import java.io.Serializable;
+import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
-
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name="tbl_perfis")
-@Data
+@Getter
+@Setter
+@ToString
 @NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class Perfil implements Serializable, GrantedAuthority {
+public class PerfilEntity implements Serializable, GrantedAuthority {
 
 	@Id
+	@NonNull
 	private String nome;
+
+	@ManyToMany(mappedBy = "perfis")
+	private List<UsuarioEntity> usuarios;
 	
 	private static final long serialVersionUID = 2938086839928013787L;
 	

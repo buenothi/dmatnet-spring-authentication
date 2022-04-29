@@ -1,9 +1,7 @@
 package br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica;
 
 import br.com.dmatnet.authentication.model.entities.pessoa.AbstractPessoaEntity;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Embedded;
 import javax.persistence.Inheritance;
@@ -13,8 +11,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 @MappedSuperclass
-@Inheritance(strategy= InheritanceType.JOINED)
-@Data
+@Getter
+@Setter
+@ToString
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 public abstract class AbstractPessoaFisicaEntity extends AbstractPessoaEntity implements Serializable {

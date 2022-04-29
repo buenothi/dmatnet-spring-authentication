@@ -23,7 +23,7 @@ public class UsuarioService implements UserDetailsService {
 
         Optional<UsuarioEntity> usuario = usuarioRepository.findByLogin(username);
 
-        if (usuario.isEmpty()) {
+        if (!usuario.isPresent()) {
             throw new UsernameNotFoundException("Usuario não encontrado!");
         }
 

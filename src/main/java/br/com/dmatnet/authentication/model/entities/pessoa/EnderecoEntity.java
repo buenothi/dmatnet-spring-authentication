@@ -12,14 +12,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import br.com.dmatnet.authentication.model.entities.pessoa.cidade.CidadeEntity;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Table(name = "tbl_endereco")
-@Data
+@Getter
+@Setter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode

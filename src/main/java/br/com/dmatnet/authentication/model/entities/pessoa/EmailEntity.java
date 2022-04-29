@@ -15,7 +15,9 @@ import lombok.*;
 
 @Entity
 @Table(name = "tbl_email")
-@Data
+@Getter
+@Setter
+@ToString
 @NoArgsConstructor
 @RequiredArgsConstructor
 @EqualsAndHashCode(exclude = {"tipoEmail", "isEmailPrincipal"})

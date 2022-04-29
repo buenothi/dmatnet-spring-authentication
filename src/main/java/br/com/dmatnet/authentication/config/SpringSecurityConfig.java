@@ -31,12 +31,15 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     private static final String[] PUBLIC_MATCHERS_GET = {
-            "/auth",
             "/actuator/**",
             "/v2/api-docs",
             "/configuration/**",
             "/swagger*/**",
             "/webjars/**"
+    };
+
+    private static final String[] PUBLIC_MATCHERS_POST = {
+            "/autenticacao/auth"
     };
 
     @Override
@@ -56,6 +59,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers(HttpMethod.GET, PUBLIC_MATCHERS_GET).permitAll()
+                .antMatchers(HttpMethod.POST, PUBLIC_MATCHERS_POST).permitAll()
                 .anyRequest().authenticated();
         
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);

@@ -12,7 +12,9 @@ import java.util.*;
 
 @Entity
 @Table(name="tbl_usuarios")
-@Data
+@Getter
+@Setter
+@ToString
 @NoArgsConstructor
 public class UsuarioEntity extends AbstractPessoaFisicaEntity implements Serializable, UserDetails {
 
@@ -23,7 +25,7 @@ public class UsuarioEntity extends AbstractPessoaFisicaEntity implements Seriali
 			String login,
 			String senha,
 			boolean ativo,
-			List<Perfil> perfis) {
+			List<PerfilEntity> perfis) {
 		super.setNome(nome);
 		super.setDataNascimento(dataNascimento);
 		super.setEmails(emails);
@@ -40,7 +42,7 @@ public class UsuarioEntity extends AbstractPessoaFisicaEntity implements Seriali
 	private boolean ativo;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
-	private List<Perfil> perfis;
+	private List<PerfilEntity> perfis;
 	
 	private static final long serialVersionUID = 1L;
 
