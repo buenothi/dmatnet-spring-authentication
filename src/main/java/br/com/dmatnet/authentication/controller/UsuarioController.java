@@ -19,6 +19,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/autenticacao")
@@ -64,11 +65,25 @@ public class UsuarioController {
         return ResponseEntity.ok(TokenDTO.builder().type("Bearer").token(token).build());
     }
 
-    @DeleteMapping(path = "/{id}", consumes = {"application/json"})
+    @GetMapping
     @Transactional
-    public ResponseEntity<?> delete(@PathVariable Long id) {
+    public ResponseEntity<?> getUsuario(@RequestParam(value = "id") String id) {
+        Optional<UsuarioEntity> usuarioEntity = usuarioService.findUsuarioById(UUID.fromString(id));
 
-        Optional<UsuarioEntity> usuarioADeletar = usuarioService.findUsuarioById(id);
+        if (usuarioEntity.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        UsuarioTO usuarioTO = usuarioConverter.toUsuarioTO(usuarioEntity.get());
+
+        return ResponseEntity.ok(usuarioTO);
+    }
+
+    @DeleteMapping
+    @Transactional
+    public ResponseEntity<?> delete(@RequestParam(value = "id") String id) {
+
+        Optional<UsuarioEntity> usuarioADeletar = usuarioService.findUsuarioById(UUID.fromString(id));
 
         if (usuarioADeletar.isEmpty()) {
             return ResponseEntity.notFound().build();

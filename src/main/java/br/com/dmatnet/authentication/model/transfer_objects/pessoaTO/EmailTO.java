@@ -26,7 +26,7 @@ public class EmailTO implements Serializable, Cloneable, Comparable<EmailTO> {
 
 	@Email
 	@NotEmpty
-	private String nomeEmail;
+	private String email;
 
 	@NotEmpty
 	private boolean isEmailPrincipal;
@@ -35,7 +35,7 @@ public class EmailTO implements Serializable, Cloneable, Comparable<EmailTO> {
 	private static final long serialVersionUID = 1L;
 
 	public void setNomeEmail(String nomeEmail) {
-		this.nomeEmail = nomeEmail.toUpperCase();
+		this.email = nomeEmail.toUpperCase();
 	}
 	
 	@Override
@@ -45,7 +45,7 @@ public class EmailTO implements Serializable, Cloneable, Comparable<EmailTO> {
 
 	@Override
 	public int compareTo(EmailTO outroEmail) {
-		if (Objects.equals(outroEmail.getNomeEmail(), this.nomeEmail)) {
+		if (Objects.equals(outroEmail.getEmail(), this.email)) {
 			return 0;
 		}
 		return -1;

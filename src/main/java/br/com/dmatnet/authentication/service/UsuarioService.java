@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @Transactional
@@ -38,11 +39,11 @@ public class UsuarioService implements UserDetailsService {
         usuarioRepository.delete(usuario);
     }
 
-    public Optional<UsuarioEntity> findUsuarioById(Long id) {
+    public Optional<UsuarioEntity> findUsuarioById(UUID id) {
         return usuarioRepository.findById(id);
     }
 
-    public Optional<UsuarioEntity> listUsuariosByUsuarioPai(Long idUsuarioPai) {
+    public Optional<UsuarioEntity> listUsuariosByUsuarioPai(UUID idUsuarioPai) {
         return usuarioRepository.findById(idUsuarioPai);
     }
 

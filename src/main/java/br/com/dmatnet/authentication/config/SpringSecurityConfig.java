@@ -32,6 +32,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private static final String[] PUBLIC_MATCHERS_GET = {
             "/actuator/**",
+            "/**",
             "/v2/api-docs",
             "/configuration/**",
             "/swagger*/**",

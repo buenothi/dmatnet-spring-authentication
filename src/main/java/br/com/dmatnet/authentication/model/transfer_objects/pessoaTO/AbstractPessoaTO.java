@@ -4,6 +4,7 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
+import java.util.UUID;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
@@ -21,7 +22,7 @@ import lombok.ToString;
 @EqualsAndHashCode(exclude = { "enderecos", "telefones", "emails", "dataCadastroPessoa"})
 public abstract class AbstractPessoaTO implements Serializable {
 
-	private long idPessoa;
+	private UUID idPessoa;
 
 	@NotEmpty
 	@Size(min = 3)

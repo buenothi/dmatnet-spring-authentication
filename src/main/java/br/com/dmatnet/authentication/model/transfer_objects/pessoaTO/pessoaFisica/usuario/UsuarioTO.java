@@ -1,6 +1,8 @@
 package br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica.usuario;
 
 import br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica.AbstractPessoaFisicaTO;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.validation.constraints.Min;
@@ -26,6 +28,7 @@ public class UsuarioTO extends AbstractPessoaFisicaTO implements Serializable {
 
 	@NotEmpty
 	@Min(3)
+	@JsonIgnore
 	private String senha;
 
 	private Long idUsuarioPai;
@@ -33,6 +36,7 @@ public class UsuarioTO extends AbstractPessoaFisicaTO implements Serializable {
 	@NotEmpty
 	private boolean ativo;
 
+	@JsonManagedReference
 	private List<PerfilTO> perfis;
 	
 }

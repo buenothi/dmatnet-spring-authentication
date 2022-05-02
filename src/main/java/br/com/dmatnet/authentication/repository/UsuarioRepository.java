@@ -7,12 +7,13 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Repository
-public interface UsuarioRepository extends PagingAndSortingRepository<UsuarioEntity, Long>{
+public interface UsuarioRepository extends PagingAndSortingRepository<UsuarioEntity, UUID>{
 
     @Override
-    Optional<UsuarioEntity> findById(Long aLong);
+    Optional<UsuarioEntity> findById(UUID id);
 
     Optional<UsuarioEntity> findByLogin(String login);
 

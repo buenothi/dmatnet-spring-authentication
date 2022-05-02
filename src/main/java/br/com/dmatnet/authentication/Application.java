@@ -64,7 +64,9 @@ public class Application {
         );
 
         try {
-            return usuarioRepository.save(usuarioMaster);
+            UsuarioEntity usuarioNovo = usuarioRepository.save(usuarioMaster);
+            logger.info(usuarioNovo.getIdPessoa().toString());
+            return usuarioNovo;
         } catch (DataIntegrityViolationException e) {
             logger.error(e.getMessage());
         }

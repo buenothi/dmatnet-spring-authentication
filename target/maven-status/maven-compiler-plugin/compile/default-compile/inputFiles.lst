@@ -1,5 +1,6 @@
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/cidade/CidadeEntity.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/controller/UsuarioController.java
+/Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/LoginTO.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/EmailEntity.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/config/ModelMapperConfig.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/TelefoneTipoEntity.java
@@ -9,19 +10,19 @@
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/PessoaFisicaDocumentosTO.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EnderecoTipoTO.java
+/Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/service/TokenService.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/repository/UsuarioRepository.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/TelefoneEntity.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/AbstractPessoaEntity.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/converter/UsuarioConverter.java
-/Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/Perfil.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/EnderecoEntity.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/config/SwaggerConfig.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/AbstractPessoaFisicaTO.java
+/Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/PerfilEntity.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTO.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/cidadesTO/CidadeTO.java
-/Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTipoTO.java
+/Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/TokenDTO.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.java
-/Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/EmailTipoEntity.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/PerfilTO.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/PessoaFisicaDocumentosEntity.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/Application.java
@@ -29,6 +30,7 @@
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/service/UsuarioService.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/TelefoneTO.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/cidade/EstadoEntity.java
+/Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/repository/PerfilRepository.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/cidadesTO/EstadoTO.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EnderecoTO.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/EnderecoTipoEntity.java

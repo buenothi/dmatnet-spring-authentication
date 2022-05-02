@@ -2,6 +2,7 @@ package br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuari
 
 import br.com.dmatnet.authentication.model.entities.pessoa.EmailEntity;
 import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.AbstractPessoaFisicaEntity;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
