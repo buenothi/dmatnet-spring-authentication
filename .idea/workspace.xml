@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Code Reiew e melhoria de performance">
+    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Ajustes em algumas entities">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTipoTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/AbstractPessoaEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/AbstractPessoaEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/cidade/CidadeEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/cidade/CidadeEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/cidade/EstadoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/cidade/EstadoEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTipoTO$EmailTipoTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTipoTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/TelefoneTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/TelefoneTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/PerfilTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/PerfilTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,13 +69,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "advanced.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
-}]]></component>
+}</component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
   </component>
@@ -227,5 +221,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.UsuarioEntity" memberName="dataCadastroPessoa" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

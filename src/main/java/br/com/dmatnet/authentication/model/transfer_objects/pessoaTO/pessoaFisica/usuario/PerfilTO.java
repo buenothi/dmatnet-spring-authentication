@@ -15,6 +15,6 @@ public class PerfilTO implements Serializable {
 	@Serial
     private static final long serialVersionUID = 6560264837143469631L;
 	private String nome;
-	private List<UsuarioEntity> usuarios;
+	private List<UsuarioTO> usuarios;
 	
 }

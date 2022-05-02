@@ -19,7 +19,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@EqualsAndHashCode(exclude = {"tipoEmail", "isEmailPrincipal"})
+@EqualsAndHashCode(exclude = {"isEmailPrincipal"})
 public class EmailTO implements Serializable, Cloneable, Comparable<EmailTO> {
 
 	private long idEmail;
