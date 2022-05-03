@@ -9,6 +9,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.UUID;
 
 @Service
 public class TokenService {
@@ -26,7 +27,7 @@ public class TokenService {
         Date now = new Date();
         Date exp = new Date(now.getTime() + Long.parseLong(expiration));
 
-        return Jwts.builder().setIssuer("DMATNET").setSubject(usuario.getLogin()).setIssuedAt(new Date())
+        return Jwts.builder().setIssuer("DMATNET").setSubject(usuario.getIdPessoa().toString()).setIssuedAt(new Date())
                 .setExpiration(exp).signWith(SignatureAlgorithm.HS256, secret).compact();
     }
 
@@ -39,9 +40,9 @@ public class TokenService {
         }
     }
 
-    public Integer getTokenId(String token) {
+    public UUID getTokenId(String token) {
         Claims body = Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
-        return Integer.valueOf(body.getSubject());
+        return UUID.fromString(body.getSubject());
     }
 
 }

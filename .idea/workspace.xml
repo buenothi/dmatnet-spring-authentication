@@ -4,39 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Ajustes em emailTO">
+    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Perfil Model e Repository">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/filter/TokenAuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/config/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/config/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/AbstractPessoaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/AbstractPessoaEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/PerfilEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/PerfilEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/AbstractPessoaTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/AbstractPessoaTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/PerfilTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/PerfilTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/repository/UsuarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/service/TokenService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/config/SpringSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/config/SpringSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/controller/UsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/AbstractPessoaEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/AbstractPessoaEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/AbstractPessoaTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/AbstractPessoaTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTO$EmailTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTO$EmailTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/EmailTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/PerfilTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/PerfilTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO$UsuarioTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO$UsuarioTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/repository/UsuarioRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/service/UsuarioService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dmatnet-spring-authentication-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/dmatnet-spring-authentication-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dmatnet-spring-authentication-1.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/dmatnet-spring-authentication-1.0.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.dmatnet.authentication.ApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.dmatnet.authentication.ApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.dmatnet.authentication.ApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.dmatnet.authentication.ApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/service/TokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dmatnet/authentication/service/TokenService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +192,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651506050582</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Resolução de referências cíclicas no Json">
+      <created>1651535225082</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1651535225082</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Perfil Model e Repository">
+      <created>1651535268449</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1651535268449</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -247,7 +235,9 @@
     <MESSAGE value="Finalização do processo de autenticação" />
     <MESSAGE value="Code Reiew e melhoria de performance" />
     <MESSAGE value="Ajustes em emailTO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustes em emailTO" />
+    <MESSAGE value="Resolução de referências cíclicas no Json" />
+    <MESSAGE value="Perfil Model e Repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Perfil Model e Repository" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
