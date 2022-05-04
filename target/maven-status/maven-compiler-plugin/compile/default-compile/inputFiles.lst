@@ -29,6 +29,7 @@
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/AbstractPessoaFisicaEntity.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/service/UsuarioService.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/TelefoneTO.java
+/Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/filter/TokenAuthenticationFilter.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/cidade/EstadoEntity.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/repository/PerfilRepository.java
 /Users/thiagobueno/git/dmatnet-spring-authentication/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/cidadesTO/EstadoTO.java
