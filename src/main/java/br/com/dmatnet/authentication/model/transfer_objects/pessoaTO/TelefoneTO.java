@@ -3,7 +3,7 @@ package br.com.dmatnet.authentication.model.transfer_objects.pessoaTO;
 import java.io.Serial;
 import java.io.Serializable;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

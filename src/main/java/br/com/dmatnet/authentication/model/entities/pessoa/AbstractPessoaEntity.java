@@ -1,15 +1,16 @@
 package br.com.dmatnet.authentication.model.entities.pessoa;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 import java.util.UUID;
-
-import javax.persistence.*;
-
-import lombok.*;
-import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name = "tbl_Pessoa")

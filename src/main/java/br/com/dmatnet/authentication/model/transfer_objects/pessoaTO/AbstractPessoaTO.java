@@ -6,8 +6,8 @@ import java.util.Date;
 import java.util.Set;
 import java.util.UUID;
 
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

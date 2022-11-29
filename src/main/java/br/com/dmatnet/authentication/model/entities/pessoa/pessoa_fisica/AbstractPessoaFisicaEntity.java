@@ -3,8 +3,8 @@ package br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica;
 import br.com.dmatnet.authentication.model.entities.pessoa.AbstractPessoaEntity;
 import lombok.*;
 
-import javax.persistence.Embedded;
-import javax.persistence.MappedSuperclass;
+import jakarta.persistence.Embedded;
+import jakarta.persistence.MappedSuperclass;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;

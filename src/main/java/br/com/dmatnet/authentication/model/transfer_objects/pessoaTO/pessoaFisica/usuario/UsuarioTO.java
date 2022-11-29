@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;

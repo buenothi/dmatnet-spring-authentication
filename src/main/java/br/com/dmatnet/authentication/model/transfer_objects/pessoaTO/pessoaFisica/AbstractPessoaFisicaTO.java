@@ -5,8 +5,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;

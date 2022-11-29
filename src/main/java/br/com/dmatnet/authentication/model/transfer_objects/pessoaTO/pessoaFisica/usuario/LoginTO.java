@@ -2,8 +2,8 @@ package br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisi
 
 import lombok.*;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
 import java.io.Serializable;
 
 @Data

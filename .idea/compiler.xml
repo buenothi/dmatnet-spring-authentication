@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="dmatnet-spring-authentication" target="14" />
+      <module name="dmatnet-spring-authentication" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

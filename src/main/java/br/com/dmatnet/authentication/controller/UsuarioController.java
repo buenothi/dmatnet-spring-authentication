@@ -17,7 +17,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -30,9 +30,6 @@ public class UsuarioController {
 
     @Autowired
     private UsuarioConverter usuarioConverter;
-
-    @Autowired
-    private AuthenticationManager authenticationManager;
 
     @Autowired
     private TokenService tokenService;
@@ -58,11 +55,9 @@ public class UsuarioController {
 
         UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(login.getLogin(), login.getSenha());
 
-        Authentication authentication = authenticationManager.authenticate(usernamePasswordAuthenticationToken);
+        String token = tokenService.generateToken(null);
 
-        String token = tokenService.generateToken(authentication);
-
-        return ResponseEntity.ok(TokenDTO.builder().type("Bearer").token(token).build());
+        return null;
     }
 
     @GetMapping
