@@ -4,9 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Att Spring para 3.0.0 e config do Eureka Client">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dmatnet-spring-authentication-1.0.jar.original" beforeDir="false" />
+    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Ajuste no ignore e demais arquivos">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/filter/JWTAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/filter/JWTAuthorizationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/constants/SecurityConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_69.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_69.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcutil_jdk15on_1_69.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_6_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/config/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/config/SpringSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/filter/TokenAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/converter/UsuarioConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/converter/UsuarioConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/LoginTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/LoginTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/service/TokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,20 +54,7 @@
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.5.6/spring-data-commons-2.5.6-sources.jar!/org/springframework/data/repository/PagingAndSortingRepository.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
-      </map>
-    </option>
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -74,6 +80,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.preview.features.used": "true",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -118,7 +125,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
-        <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -243,12 +249,44 @@
       <option name="project" value="LOCAL" />
       <updated>1669682423958</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="AJuste no ignore">
+      <created>1669682688582</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669682688582</updated>
+    </task>
+    <task id="LOCAL-00018" summary="AJuste no ignore">
+      <created>1669682708956</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1669682708956</updated>
+    </task>
+    <task id="LOCAL-00019" summary="AJuste no ignore e demais arquivos">
+      <created>1669682829649</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669682829649</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
     <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -277,17 +315,11 @@
     <MESSAGE value="Habilitando a autenticação por Token" />
     <MESSAGE value="Dockerizando a app" />
     <MESSAGE value="Att Spring para 3.0.0 e config do Eureka Client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Att Spring para 3.0.0 e config do Eureka Client" />
+    <MESSAGE value="AJuste no ignore" />
+    <MESSAGE value="AJuste no ignore e demais arquivos" />
+    <option name="LAST_COMMIT_MESSAGE" value="AJuste no ignore e demais arquivos" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="org.springframework.dao.DataIntegrityViolationException" package="org.springframework.dao" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.UsuarioEntity" memberName="dataCadastroPessoa" />

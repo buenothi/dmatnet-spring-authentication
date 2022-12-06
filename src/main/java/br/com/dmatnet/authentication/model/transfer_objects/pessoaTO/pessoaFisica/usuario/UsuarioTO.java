@@ -3,10 +3,9 @@ package br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisi
 import br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica.AbstractPessoaFisicaTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotEmpty;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
@@ -23,11 +22,9 @@ public class UsuarioTO extends AbstractPessoaFisicaTO implements Serializable {
 	private static final long serialVersionUID = 8217011121551586768L;
 
 	@NotEmpty
-	@Min(3)
 	private String login;
 
 	@NotEmpty
-	@Min(3)
 	@JsonIgnore
 	private String senha;
 

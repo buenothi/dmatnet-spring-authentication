@@ -13,16 +13,12 @@ public class UsuarioConverter {
 	
 	@Autowired
 	ModelMapper modelMapper;
-
-	@Autowired
-	BCryptPasswordEncoder passwordEncoder;
 	
 	public UsuarioTO toUsuarioTO(UsuarioEntity entity) {
 		return modelMapper.map(entity, UsuarioTO.class);
 	}
 
 	public UsuarioEntity toUsuarioEntity(UsuarioTO to) {
-		to.setSenha(passwordEncoder.encode(to.getSenha()));
 		return modelMapper.map(to, UsuarioEntity.class);
 	}
 

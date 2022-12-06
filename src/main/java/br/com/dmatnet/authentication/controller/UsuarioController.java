@@ -2,22 +2,17 @@ package br.com.dmatnet.authentication.controller;
 
 import br.com.dmatnet.authentication.model.converter.UsuarioConverter;
 import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.UsuarioEntity;
-import br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica.usuario.LoginTO;
-import br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica.usuario.TokenDTO;
 import br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica.usuario.UsuarioTO;
-import br.com.dmatnet.authentication.service.TokenService;
 import br.com.dmatnet.authentication.service.UsuarioService;
+import jakarta.validation.Valid;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import jakarta.validation.Valid;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -32,11 +27,13 @@ public class UsuarioController {
     private UsuarioConverter usuarioConverter;
 
     @Autowired
-    private TokenService tokenService;
+    private BCryptPasswordEncoder encoder;
 
     @PostMapping
     @Transactional
-    public ResponseEntity<?> salvarUsuario(@RequestBody @Valid UsuarioTO usuario) {
+    public ResponseEntity<?> salvarUsuario(@RequestBody @Valid @NotNull UsuarioTO usuario) {
+
+        usuario.setSenha(encoder.encode(usuario.getSenha()));
 
         UsuarioEntity usuarioCriado = usuarioService.save(usuarioConverter.toUsuarioEntity(usuario));
 
@@ -46,18 +43,7 @@ public class UsuarioController {
                 .build()
                 .toUri();
 
-        return ResponseEntity.created(uri).body(null);
-    }
-
-    @PostMapping("/auth")
-    @Transactional
-    public ResponseEntity<TokenDTO> autenticar(@RequestBody @Validated LoginTO login) {
-
-        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(login.getLogin(), login.getSenha());
-
-        String token = tokenService.generateToken(null);
-
-        return null;
+        return ResponseEntity.created(uri).body(usuarioConverter.toUsuarioTO(usuarioCriado));
     }
 
     @GetMapping
