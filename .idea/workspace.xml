@@ -4,28 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Ajuste no ignore e demais arquivos">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/filter/JWTAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/filter/JWTAuthorizationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/constants/SecurityConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_69.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_69.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcutil_jdk15on_1_69.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_3_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_6_0_0.xml" beforeDir="false" />
+    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Alteraçao no GIT Ignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/config/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/config/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/filter/TokenAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/converter/UsuarioConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/converter/UsuarioConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/LoginTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/LoginTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/transfer_objects/pessoaTO/pessoaFisica/usuario/UsuarioTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/service/TokenService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +251,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669682829649</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Refatoração do Security (Authentication) com filtros">
+      <created>1670359549104</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1670359549104</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Alteraçao no GIT Ignore">
+      <created>1670359632320</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1670359632320</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -317,7 +312,9 @@
     <MESSAGE value="Att Spring para 3.0.0 e config do Eureka Client" />
     <MESSAGE value="AJuste no ignore" />
     <MESSAGE value="AJuste no ignore e demais arquivos" />
-    <option name="LAST_COMMIT_MESSAGE" value="AJuste no ignore e demais arquivos" />
+    <MESSAGE value="Refatoração do Security (Authentication) com filtros" />
+    <MESSAGE value="Alteraçao no GIT Ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteraçao no GIT Ignore" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
