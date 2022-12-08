@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Atualização do Dockerfile">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
+    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Conclusão do Dockerfile">
+      <change beforePath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,15 +111,7 @@
     <configuration name="Spring-Auth-Docker" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="containerName" value="spring_auth-container" />
-          <option name="portBindings">
-            <list>
-              <DockerPortBindingImpl>
-                <option name="containerPort" value="8080" />
-                <option name="hostPort" value="8181" />
-              </DockerPortBindingImpl>
-            </list>
-          </option>
+          <option name="containerName" value="dmatnet-auth-spring" />
           <option name="sourceFilePath" value="Dockerfile" />
         </settings>
       </deployment>
@@ -133,8 +124,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Spring-Auth-Docker" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="Docker.Spring-Auth-Docker" />
       </list>
     </recent_temporary>
   </component>
@@ -301,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670416546764</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Conclusão do Dockerfile">
+      <created>1670510557163</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1670510557164</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -351,7 +349,8 @@
     <MESSAGE value="Refatoração do Security (Authentication) com filtros" />
     <MESSAGE value="Alteraçao no GIT Ignore" />
     <MESSAGE value="Atualização do Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualização do Dockerfile" />
+    <MESSAGE value="Conclusão do Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Conclusão do Dockerfile" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
