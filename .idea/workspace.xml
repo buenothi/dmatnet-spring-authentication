@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Alteraçao no GIT Ignore">
+    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Atualização do Dockerfile">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,22 +58,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ignore.preview.features.used": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/thiagobueno/git/dmatnet-spring-authentication/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -86,14 +95,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test-dmatnet-auth" type="JUnit" factoryName="JUnit">
+      <module name="dmatnet-spring-authentication" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JarApplication">
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2" />
     </configuration>
-    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+    <configuration name="Spring-Auth-Docker" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="containerName" value="" />
+          <option name="containerName" value="spring_auth-container" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8080" />
+                <option name="hostPort" value="8181" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
           <option name="sourceFilePath" value="Dockerfile" />
         </settings>
       </deployment>
@@ -101,10 +128,12 @@
     </configuration>
     <list>
       <item itemvalue="Application.Application" />
-      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="Docker.Spring-Auth-Docker" />
+      <item itemvalue="JUnit.test-dmatnet-auth" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Spring-Auth-Docker" />
         <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
@@ -265,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670359632320</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Atualização do Dockerfile">
+      <created>1670416546764</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670416546764</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -314,7 +350,8 @@
     <MESSAGE value="AJuste no ignore e demais arquivos" />
     <MESSAGE value="Refatoração do Security (Authentication) com filtros" />
     <MESSAGE value="Alteraçao no GIT Ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alteraçao no GIT Ignore" />
+    <MESSAGE value="Atualização do Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualização do Dockerfile" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
