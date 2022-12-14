@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Conclusão do Dockerfile">
+    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Instalação do Jacoco">
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/dmatnet/authentication/controller/UsuarioControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/dmatnet/authentication/service/UsuarioServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/thiagobueno/git/dmatnet-spring-authentication/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -80,7 +81,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="JUnit.UsuarioServiceTest">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.dmatnet.authentication.Application" />
       <module name="dmatnet-spring-authentication" />
@@ -94,12 +95,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test-dmatnet-auth" type="JUnit" factoryName="JUnit">
+    <configuration name="UsuarioServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dmatnet-spring-authentication" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.dmatnet.authentication.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.dmatnet.authentication.service" />
+      <option name="MAIN_CLASS_NAME" value="br.com.dmatnet.authentication.service.UsuarioServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsuarioServiceTest.chamarLoadUserByNameComUsuarioVazioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dmatnet-spring-authentication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.dmatnet.authentication.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.dmatnet.authentication.service" />
+      <option name="MAIN_CLASS_NAME" value="br.com.dmatnet.authentication.service.UsuarioServiceTest" />
+      <option name="METHOD_NAME" value="chamarLoadUserByNameComUsuarioVazioTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsuarioServiceTest.chamarLoadUserByNameSucessoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dmatnet-spring-authentication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.dmatnet.authentication.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.dmatnet.authentication.service" />
+      <option name="MAIN_CLASS_NAME" value="br.com.dmatnet.authentication.service.UsuarioServiceTest" />
+      <option name="METHOD_NAME" value="chamarLoadUserByNameSucessoTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,10 +158,15 @@
     <list>
       <item itemvalue="Application.Application" />
       <item itemvalue="Docker.Spring-Auth-Docker" />
-      <item itemvalue="JUnit.test-dmatnet-auth" />
+      <item itemvalue="JUnit.UsuarioServiceTest" />
+      <item itemvalue="JUnit.UsuarioServiceTest.chamarLoadUserByNameComUsuarioVazioTest" />
+      <item itemvalue="JUnit.UsuarioServiceTest.chamarLoadUserByNameSucessoTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UsuarioServiceTest" />
+        <item itemvalue="JUnit.UsuarioServiceTest.chamarLoadUserByNameComUsuarioVazioTest" />
+        <item itemvalue="JUnit.UsuarioServiceTest.chamarLoadUserByNameSucessoTest" />
         <item itemvalue="Application.Application" />
         <item itemvalue="Docker.Spring-Auth-Docker" />
       </list>
@@ -299,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670510557164</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Instalação do Jacoco">
+      <created>1670536870803</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1670536870805</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -350,7 +400,8 @@
     <MESSAGE value="Alteraçao no GIT Ignore" />
     <MESSAGE value="Atualização do Dockerfile" />
     <MESSAGE value="Conclusão do Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Conclusão do Dockerfile" />
+    <MESSAGE value="Instalação do Jacoco" />
+    <option name="LAST_COMMIT_MESSAGE" value="Instalação do Jacoco" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

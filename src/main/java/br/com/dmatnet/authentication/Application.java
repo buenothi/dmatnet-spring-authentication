@@ -32,7 +32,7 @@ public class Application {
 
     }
 
-    @Bean
+ /*   @Bean
     public UsuarioEntity cadastrarUsuarioMaster (
             UsuarioRepository usuarioRepository,
             PerfilRepository perfilRepository) {
@@ -72,6 +72,6 @@ public class Application {
         }
 
         return null;
-    }
+    }*/
 
 }
