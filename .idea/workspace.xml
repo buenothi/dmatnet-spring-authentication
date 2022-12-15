@@ -4,12 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Instalação do Jacoco">
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/dmatnet/authentication/controller/UsuarioControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/dmatnet/authentication/service/UsuarioServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dmatnet-spring-authentication.iml" afterDir="false" />
+    <list default="true" id="1ae3b03b-807f-4490-bb63-2ad7dff7bdf5" name="Default Changelist" comment="Testes Unitários de Usuário Services">
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/dmatnet/authentication/model/builders/UsuarioBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/AbstractPessoaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/AbstractPessoaEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/EmailEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/EmailEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/EnderecoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/EnderecoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/EnderecoTipoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/EnderecoTipoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/cidade/CidadeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/cidade/CidadeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/cidade/EstadoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/cidade/EstadoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/AbstractPessoaFisicaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/AbstractPessoaFisicaEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/PessoaFisicaDocumentosEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/PessoaFisicaDocumentosEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/model/entities/pessoa/pessoa_fisica/usuario/UsuarioEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dmatnet/authentication/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/dmatnet/authentication/controller/UsuarioControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/dmatnet/authentication/controller/UsuarioControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/dmatnet/authentication/service/UsuarioServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/dmatnet/authentication/service/UsuarioServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,16 +93,10 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsuarioServiceTest">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.dmatnet-auth-Springboot">
+    <configuration name="dmatnet-auth-Springboot" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="br.com.dmatnet.authentication.Application" />
       <module name="dmatnet-spring-authentication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.dmatnet.authentication.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,7 +132,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsuarioServiceTest.chamarLoadUserByNameSucessoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsuarioServiceTest.deletarUsuarioSucessoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dmatnet-spring-authentication" />
       <extension name="coverage">
         <pattern>
@@ -136,7 +142,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="br.com.dmatnet.authentication.service" />
       <option name="MAIN_CLASS_NAME" value="br.com.dmatnet.authentication.service.UsuarioServiceTest" />
-      <option name="METHOD_NAME" value="chamarLoadUserByNameSucessoTest" />
+      <option name="METHOD_NAME" value="deletarUsuarioSucessoTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsuarioServiceTest.listUsuariosByUsuarioPaiSucessoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dmatnet-spring-authentication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.dmatnet.authentication.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.dmatnet.authentication.service" />
+      <option name="MAIN_CLASS_NAME" value="br.com.dmatnet.authentication.service.UsuarioServiceTest" />
+      <option name="METHOD_NAME" value="listUsuariosByUsuarioPaiSucessoTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsuarioServiceTest.salvarUsuarioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dmatnet-spring-authentication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.dmatnet.authentication.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.dmatnet.authentication.service" />
+      <option name="MAIN_CLASS_NAME" value="br.com.dmatnet.authentication.service.UsuarioServiceTest" />
+      <option name="METHOD_NAME" value="salvarUsuarioTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,29 +184,21 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2" />
     </configuration>
-    <configuration name="Spring-Auth-Docker" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="containerName" value="dmatnet-auth-spring" />
-          <option name="sourceFilePath" value="Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Application.Application" />
-      <item itemvalue="Docker.Spring-Auth-Docker" />
+      <item itemvalue="Application.dmatnet-auth-Springboot" />
       <item itemvalue="JUnit.UsuarioServiceTest" />
       <item itemvalue="JUnit.UsuarioServiceTest.chamarLoadUserByNameComUsuarioVazioTest" />
-      <item itemvalue="JUnit.UsuarioServiceTest.chamarLoadUserByNameSucessoTest" />
+      <item itemvalue="JUnit.UsuarioServiceTest.deletarUsuarioSucessoTest" />
+      <item itemvalue="JUnit.UsuarioServiceTest.listUsuariosByUsuarioPaiSucessoTest" />
+      <item itemvalue="JUnit.UsuarioServiceTest.salvarUsuarioTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UsuarioServiceTest.listUsuariosByUsuarioPaiSucessoTest" />
+        <item itemvalue="JUnit.UsuarioServiceTest.deletarUsuarioSucessoTest" />
+        <item itemvalue="JUnit.UsuarioServiceTest.salvarUsuarioTest" />
         <item itemvalue="JUnit.UsuarioServiceTest" />
         <item itemvalue="JUnit.UsuarioServiceTest.chamarLoadUserByNameComUsuarioVazioTest" />
-        <item itemvalue="JUnit.UsuarioServiceTest.chamarLoadUserByNameSucessoTest" />
-        <item itemvalue="Application.Application" />
-        <item itemvalue="Docker.Spring-Auth-Docker" />
       </list>
     </recent_temporary>
   </component>
@@ -349,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670536870805</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Testes Unitários de Usuário Services">
+      <created>1671058419088</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1671058419088</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -401,7 +438,8 @@
     <MESSAGE value="Atualização do Dockerfile" />
     <MESSAGE value="Conclusão do Dockerfile" />
     <MESSAGE value="Instalação do Jacoco" />
-    <option name="LAST_COMMIT_MESSAGE" value="Instalação do Jacoco" />
+    <MESSAGE value="Testes Unitários de Usuário Services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testes Unitários de Usuário Services" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

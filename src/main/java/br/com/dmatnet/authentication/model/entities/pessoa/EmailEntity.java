@@ -17,6 +17,7 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @RequiredArgsConstructor
 public class EmailEntity implements Serializable, Cloneable, Comparable<EmailEntity> {
 

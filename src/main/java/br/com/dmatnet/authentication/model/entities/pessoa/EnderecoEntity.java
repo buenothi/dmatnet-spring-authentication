@@ -2,6 +2,7 @@ package br.com.dmatnet.authentication.model.entities.pessoa;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -37,8 +38,8 @@ public class EnderecoEntity implements Serializable, Cloneable {
 	private String bairro;
 	private String cep;
 	private String caixaPostal;
-	private Date dataInicioEndereco;
-	private Date dataTerminoEndereco;
+	private LocalDate dataInicioEndereco;
+	private LocalDate dataTerminoEndereco;
 
 	@ManyToOne
 	@JoinColumn(name = "CIDADE_ID")

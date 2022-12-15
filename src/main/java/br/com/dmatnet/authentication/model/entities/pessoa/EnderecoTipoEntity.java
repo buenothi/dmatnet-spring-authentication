@@ -15,6 +15,7 @@ import lombok.*;
 @Table(name = "tbl_Logradouro")
 @Getter
 @Setter
+@AllArgsConstructor
 @NoArgsConstructor
 public class EnderecoTipoEntity implements Serializable {
 

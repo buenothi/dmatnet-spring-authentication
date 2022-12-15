@@ -1,26 +1,28 @@
 package br.com.dmatnet.authentication.controller;
 
-import br.com.dmatnet.authentication.model.converter.UsuarioConverter;
-import br.com.dmatnet.authentication.service.UsuarioService;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-@WebMvcTest
+@SpringBootTest
+@AutoConfigureMockMvc
 public class UsuarioControllerTest {
 
-    @MockBean
-    UsuarioService usuarioService;
+    @Autowired
+    MockMvc mockMvc;
 
-    @MockBean
-    UsuarioConverter usuarioConverter;
+/*    @Test
+    public void shouldBe_SaveNewUser_Success() {
 
-    @MockBean
-    BCryptPasswordEncoder encoder;
+        mockMvc.perform(MockMvcRequestBuilders
+                .post("/autenticacao")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content()
 
-    @Test
-    public void deveSalvarUsuarioTest() {
+    }*/
 
-    }
 }

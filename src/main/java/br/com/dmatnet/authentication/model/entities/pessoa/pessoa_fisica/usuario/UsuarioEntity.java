@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import jakarta.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.*;
 
 @Entity
@@ -22,7 +23,7 @@ public class UsuarioEntity extends AbstractPessoaFisicaEntity implements Seriali
 
 	public UsuarioEntity(
 			String nome,
-			Date dataNascimento,
+			LocalDate dataNascimento,
 			Set<EmailEntity> emails,
 			String login,
 			String senha,

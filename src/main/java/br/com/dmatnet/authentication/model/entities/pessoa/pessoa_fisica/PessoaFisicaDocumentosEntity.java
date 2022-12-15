@@ -1,14 +1,13 @@
 package br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica;
 
-import java.io.Serial;
-import java.io.Serializable;
-import java.util.Date;
-
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
-
 import lombok.*;
+
+import java.io.Serial;
+import java.io.Serializable;
+import java.time.LocalDate;
 
 @Embeddable
 @Getter
@@ -23,38 +22,57 @@ public class PessoaFisicaDocumentosEntity implements Serializable, Cloneable {
 	private String ricOrgExpedidor;
 
 	@Temporal(TemporalType.DATE)
-	private Date ricDataExpedicao;
+	private LocalDate ricDataExpedicao;
 
 	private String numRG;
 	private String rgOrgExpedidor;
 
 	@Temporal(TemporalType.DATE)
-	private Date rgDataExpedicao;
+	private LocalDate rgDataExpedicao;
 
-	private Long numCPF;
+	private String numCPF;
 
-	private Long numRNE;
+	private String numRNE;
 	private String rneOrgExpedidor;
 
 	@Temporal(TemporalType.DATE)
-	private Date rneDataExpedicao;
+	private LocalDate rneDataExpedicao;
 
 	private Long numCNH;
 	private String cnhUf;
 
 	@Temporal(TemporalType.DATE)
-	private Date cnhDataExpedicao;
+	private LocalDate cnhDataExpedicao;
 
 	@Temporal(TemporalType.DATE)
-	private Date cnhValidade;
+	private LocalDate cnhValidade;
 
 	@Temporal(TemporalType.DATE)
-	private Date cnhPrimeiraEmissao;
+	private LocalDate cnhPrimeiraEmissao;
 
 	private String cnhCategoria;
 
 	@Serial
 	private static final long serialVersionUID = 1L;
+
+	public PessoaFisicaDocumentosEntity(Long numRic, String ricOrgExpedidor, LocalDate ricDataExpedicao, String numRG, String rgOrgExpedidor, LocalDate rgDataExpedicao, String numCPF, String numRNE, String rneOrgExpedidor, LocalDate rneDataExpedicao, Long numCNH, String cnhUf, LocalDate cnhDataExpedicao, LocalDate cnhValidade, LocalDate cnhPrimeiraEmissao, String cnhCategoria) {
+		this.numRic = numRic;
+		this.ricOrgExpedidor = ricOrgExpedidor;
+		this.ricDataExpedicao = ricDataExpedicao;
+		this.numRG = numRG;
+		this.rgOrgExpedidor = rgOrgExpedidor;
+		this.rgDataExpedicao = rgDataExpedicao;
+		this.numCPF = numCPF;
+		this.numRNE = numRNE;
+		this.rneOrgExpedidor = rneOrgExpedidor;
+		this.rneDataExpedicao = rneDataExpedicao;
+		this.numCNH = numCNH;
+		this.cnhUf = cnhUf;
+		this.cnhDataExpedicao = cnhDataExpedicao;
+		this.cnhValidade = cnhValidade;
+		this.cnhPrimeiraEmissao = cnhPrimeiraEmissao;
+		this.cnhCategoria = cnhCategoria;
+	}
 
 	@Override
 	public PessoaFisicaDocumentosEntity clone() throws CloneNotSupportedException {

@@ -1,13 +1,15 @@
 package br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica;
 
 import br.com.dmatnet.authentication.model.entities.pessoa.AbstractPessoaEntity;
-import lombok.*;
-
 import jakarta.persistence.Embedded;
 import jakarta.persistence.MappedSuperclass;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 @MappedSuperclass
 @Getter
@@ -23,6 +25,6 @@ public abstract class AbstractPessoaFisicaEntity extends AbstractPessoaEntity im
 
 	@Embedded
 	private PessoaFisicaDocumentosEntity documentosPessoais;
-	private Date dataNascimento;
+	private LocalDate dataNascimento;
 
 }

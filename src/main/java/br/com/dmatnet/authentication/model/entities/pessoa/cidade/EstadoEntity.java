@@ -1,5 +1,6 @@
 package br.com.dmatnet.authentication.model.entities.pessoa.cidade;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,6 +26,7 @@ import jakarta.validation.constraints.Size;
 @NamedQueries({
 		@NamedQuery(name = "Estados.listarTodasCidadesPorEstado", 
 				query = "SELECT cid FROM CidadeEntity cid WHERE cid.estado=:estado")})
+@AllArgsConstructor
 public class EstadoEntity implements Serializable {
 
 	@Id

@@ -32,7 +32,7 @@ public class Application {
 
     }
 
- /*   @Bean
+    @Bean
     public UsuarioEntity cadastrarUsuarioMaster (
             UsuarioRepository usuarioRepository,
             PerfilRepository perfilRepository) {
@@ -51,7 +51,7 @@ public class Application {
 
         UsuarioEntity usuarioMaster = new UsuarioEntity(
                 "Thiago Gonçalves Bueno",
-                Date.from(LocalDate.of(1983, 2, 16).atStartOfDay(ZoneId.systemDefault()).toInstant()),
+                LocalDate.parse("1983-02-16"),
                 new HashSet<>(Collections.singleton(
                         new EmailEntity(
                                 "bueno_thiago@outlook.com",
@@ -72,6 +72,6 @@ public class Application {
         }
 
         return null;
-    }*/
+    }
 
 }

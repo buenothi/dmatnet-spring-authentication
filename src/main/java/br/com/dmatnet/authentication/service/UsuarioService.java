@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -43,8 +44,8 @@ public class UsuarioService implements UserDetailsService {
         return usuarioRepository.findById(id);
     }
 
-    public Optional<UsuarioEntity> listUsuariosByUsuarioPai(UUID idUsuarioPai) {
-        return usuarioRepository.findById(idUsuarioPai);
+    public List<UsuarioEntity> listUsuariosByUsuarioPai(UUID idUsuarioPai) {
+        return usuarioRepository.findByIdUsuarioPai(idUsuarioPai);
     }
 
 }

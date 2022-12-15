@@ -8,7 +8,7 @@ import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.Set;
 import java.util.UUID;
 
@@ -41,7 +41,7 @@ public abstract class AbstractPessoaEntity implements Serializable {
 	private Set<EmailEntity> emails;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date dataCadastroPessoa;
+	private LocalDateTime dataCadastroPessoa;
 
 	@Serial
 	private static final long serialVersionUID = 1L;
