@@ -5,7 +5,6 @@ import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario
 import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.UsuarioEntity;
 import br.com.dmatnet.authentication.repository.PerfilRepository;
 import br.com.dmatnet.authentication.repository.UsuarioRepository;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -15,10 +14,8 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.time.LocalDate;
-import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashSet;
 
 @SpringBootApplication
