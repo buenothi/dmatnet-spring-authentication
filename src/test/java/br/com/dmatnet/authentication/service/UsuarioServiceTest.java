@@ -1,7 +1,6 @@
 package br.com.dmatnet.authentication.service;
 
 import br.com.dmatnet.authentication.model.builders.UsuarioBuilder;
-import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.PessoaFisicaDocumentosEntity;
 import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.UsuarioEntity;
 import br.com.dmatnet.authentication.repository.UsuarioRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,8 +14,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.time.LocalDate;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -26,27 +27,13 @@ import static org.mockito.Mockito.*;
 @ExtendWith(SpringExtension.class)
 public class UsuarioServiceTest {
 
-    private UsuarioEntity usuario = new UsuarioEntity();
-
-    @Autowired
-    private UsuarioBuilder usuarioBuilder = new UsuarioBuilder();
     @MockBean
     UsuarioRepository usuarioRepository;
     @Autowired
     UsuarioService usuarioService;
-
-    @TestConfiguration
-    static class usuarioServiceTestConfiguration {
-
-        @Bean
-        public UsuarioService usuarioServiceTest() {
-            return new UsuarioService();
-        }
-
-        @Bean
-        public UsuarioBuilder usuarioBuilder() { return new UsuarioBuilder(); }
-
-    }
+    private UsuarioEntity usuario = new UsuarioEntity();
+    @Autowired
+    private UsuarioBuilder usuarioBuilder = new UsuarioBuilder();
 
     @BeforeEach
     public void criarUsuarioMock() {
@@ -81,6 +68,7 @@ public class UsuarioServiceTest {
         assertEquals(usuarioService.save(usuario)
                 .getUsername(), usuario.getUsername());
     }
+
     @Test
     public void shouldBe_deleteUser_Success() {
         doNothing().when(usuarioRepository).delete(any());
@@ -92,7 +80,7 @@ public class UsuarioServiceTest {
     }
 
     @Test
-    public void shouldBe_findUsuarioById_Success(){
+    public void shouldBe_findUsuarioById_Success() {
         when(usuarioRepository.findById(any()))
                 .thenReturn(Optional.ofNullable(usuario));
 
@@ -110,6 +98,21 @@ public class UsuarioServiceTest {
 
         assertEquals(usuarioService
                 .listUsuariosByUsuarioPai(UUID.randomUUID()).size(), 1);
+
+    }
+
+    @TestConfiguration
+    static class usuarioServiceTestConfiguration {
+
+        @Bean
+        public UsuarioService usuarioServiceTest() {
+            return new UsuarioService();
+        }
+
+        @Bean
+        public UsuarioBuilder usuarioBuilder() {
+            return new UsuarioBuilder();
+        }
 
     }
 
