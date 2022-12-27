@@ -5,21 +5,19 @@ import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario
 import br.com.dmatnet.authentication.service.UsuarioService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentMatchers;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.util.Optional;
 import java.util.UUID;
 
-import static org.mockito.ArgumentMatchers.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -54,14 +52,31 @@ public class UsuarioControllerTest {
         when(usuarioService.findUsuarioById(any()))
                 .thenReturn(Optional.ofNullable(usuarioEntityMock));
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/autenticacao")
-                .accept(MediaType.ALL)
-                .param("id", id))
+        mockMvc.perform(get("/autenticacao")
+                        .accept(MediaType.ALL)
+                        .param("id", id))
                 .andDo(print())
                 .andExpect(status().isOk());
 
     }
 
+    @Test
+    public void sholdBe_getUser_NotFoundUser() throws Exception {
+
+        String id = UUID.randomUUID().toString();
+
+        Optional<UsuarioEntity> usuarioEntityEmpty = Optional.empty();
+
+        when(usuarioService.findUsuarioById(any()))
+                .thenReturn(usuarioEntityEmpty);
+
+        mockMvc.perform(get("/autenticacao")
+                        .accept(MediaType.ALL)
+                        .param("id", id))
+                .andDo(print())
+                .andExpect(status().isNotFound());
+
+    }
 
 
 }
