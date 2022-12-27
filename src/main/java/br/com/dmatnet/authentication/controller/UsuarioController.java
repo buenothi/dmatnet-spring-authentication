@@ -1,8 +1,9 @@
 package br.com.dmatnet.authentication.controller;
 
+import br.com.dmatnet.authentication.model.DTO.pessoa.usuario.UsuarioRequestDTO;
+import br.com.dmatnet.authentication.model.DTO.pessoa.usuario.UsuarioResponseDTO;
 import br.com.dmatnet.authentication.model.converter.UsuarioConverter;
 import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.UsuarioEntity;
-import br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica.usuario.UsuarioTO;
 import br.com.dmatnet.authentication.service.UsuarioService;
 import jakarta.validation.Valid;
 import org.jetbrains.annotations.NotNull;
@@ -31,11 +32,11 @@ public class UsuarioController {
 
     @PostMapping
     @Transactional
-    public ResponseEntity<?> salvarUsuario(@RequestBody @Valid @NotNull UsuarioTO usuario) {
+    public ResponseEntity<?> salvarUsuario(@RequestBody @Valid @NotNull UsuarioRequestDTO usuario) {
 
         usuario.setSenha(encoder.encode(usuario.getSenha()));
 
-        UsuarioEntity usuarioCriado = usuarioService.save(usuarioConverter.toUsuarioEntity(usuario));
+        UsuarioEntity usuarioCriado = usuarioService.save(usuarioConverter.usuarioRequestToEntity(usuario));
 
         var uri = ServletUriComponentsBuilder
                 .fromCurrentRequest()
@@ -43,7 +44,7 @@ public class UsuarioController {
                 .build()
                 .toUri();
 
-        return ResponseEntity.created(uri).body(usuarioConverter.toUsuarioTO(usuarioCriado));
+        return ResponseEntity.created(uri).body(usuarioConverter.toUsuarioResponseDTO(usuarioCriado));
     }
 
     @GetMapping
@@ -55,9 +56,9 @@ public class UsuarioController {
             return ResponseEntity.notFound().build();
         }
 
-        UsuarioTO usuarioTO = usuarioConverter.toUsuarioTO(usuarioEntity.get());
+        UsuarioResponseDTO usuarioDTO = usuarioConverter.toUsuarioResponseDTO(usuarioEntity.get());
 
-        return ResponseEntity.ok(usuarioTO);
+        return ResponseEntity.ok(usuarioDTO);
     }
 
     @DeleteMapping

@@ -1,25 +1,32 @@
 package br.com.dmatnet.authentication.model.converter;
 
+import br.com.dmatnet.authentication.model.DTO.pessoa.usuario.UsuarioRequestDTO;
+import br.com.dmatnet.authentication.model.DTO.pessoa.usuario.UsuarioResponseDTO;
+import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.UsuarioEntity;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
-
-import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.UsuarioEntity;
-import br.com.dmatnet.authentication.model.transfer_objects.pessoaTO.pessoaFisica.usuario.UsuarioTO;
 
 @Component
 public class UsuarioConverter {
-	
-	@Autowired
-	ModelMapper modelMapper;
-	
-	public UsuarioTO toUsuarioTO(UsuarioEntity entity) {
-		return modelMapper.map(entity, UsuarioTO.class);
-	}
 
-	public UsuarioEntity toUsuarioEntity(UsuarioTO to) {
-		return modelMapper.map(to, UsuarioEntity.class);
-	}
+    @Autowired
+    ModelMapper modelMapper;
+
+    public UsuarioRequestDTO toUsuarioRequestDTO(UsuarioEntity entity) {
+        return modelMapper.map(entity, UsuarioRequestDTO.class);
+    }
+
+    public UsuarioResponseDTO toUsuarioResponseDTO(UsuarioEntity entity) {
+        return modelMapper.map(entity, UsuarioResponseDTO.class);
+    }
+
+    public UsuarioEntity usuarioRequestToEntity(UsuarioRequestDTO dto) {
+        return modelMapper.map(dto, UsuarioEntity.class);
+    }
+
+    public UsuarioEntity usuarioResponseToEntity(UsuarioRequestDTO dto) {
+        return modelMapper.map(dto, UsuarioEntity.class);
+    }
 
 }

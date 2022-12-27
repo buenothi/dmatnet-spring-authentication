@@ -1,15 +1,13 @@
 package br.com.dmatnet.authentication.model.entities.pessoa;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.io.Serial;
 import java.io.Serializable;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
-import lombok.*;
 
 @Entity
 @Table(name = "tbl_Logradouro")
@@ -19,15 +17,12 @@ import lombok.*;
 @NoArgsConstructor
 public class EnderecoTipoEntity implements Serializable {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idNomeLogradouro;
-	
-	private String siglaLogradouro;
-
-	private String nomeLogradouro;
-
-	@Serial
+    @Serial
     private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idNomeLogradouro;
+    private String siglaLogradouro;
+    private String nomeLogradouro;
 
 }

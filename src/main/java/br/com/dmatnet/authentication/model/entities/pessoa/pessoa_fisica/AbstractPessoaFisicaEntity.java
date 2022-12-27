@@ -17,14 +17,14 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public abstract class AbstractPessoaFisicaEntity extends AbstractPessoaEntity implements Serializable {
 
-	@Serial
-	private static final long serialVersionUID = -6151998038625475024L;
-	private int genero;
-	private int raca;
-	private int estadoCivil;
+    @Serial
+    private static final long serialVersionUID = -6151998038625475024L;
+    private int genero;
+    private int raca;
+    private int estadoCivil;
 
-	@Embedded
-	private PessoaFisicaDocumentosEntity documentosPessoais;
-	private LocalDate dataNascimento;
+    @Embedded
+    private PessoaFisicaDocumentosEntity documentosPessoais;
+    private LocalDate dataNascimento;
 
 }

@@ -21,34 +21,28 @@ import java.util.UUID;
 @AllArgsConstructor
 public abstract class AbstractPessoaEntity implements Serializable {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(columnDefinition = "BINARY(16)")
-	private UUID idPessoa;
+    @Serial
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(columnDefinition = "BINARY(16)")
+    private UUID idPessoa;
+    private String nome;
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE})
+    @JoinColumn(name = "PESSOA_ID")
+    private Set<EnderecoEntity> enderecos;
+    @OneToMany(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "PESSOA_ID")
+    private Set<TelefoneEntity> telefones;
+    @OneToMany(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "PESSOA_ID")
+    private Set<EmailEntity> emails;
+    @Temporal(TemporalType.TIMESTAMP)
+    private LocalDateTime dataCadastroPessoa;
 
-	private String nome;
-
-	@OneToMany(cascade = { CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE })
-	@JoinColumn(name = "PESSOA_ID")
-	private Set<EnderecoEntity> enderecos;
-
-	@OneToMany(cascade = { CascadeType.ALL })
-	@JoinColumn(name = "PESSOA_ID")
-	private Set<TelefoneEntity> telefones;
-
-	@OneToMany(cascade = { CascadeType.ALL })
-	@JoinColumn(name = "PESSOA_ID")
-	private Set<EmailEntity> emails;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	private LocalDateTime dataCadastroPessoa;
-
-	@Serial
-	private static final long serialVersionUID = 1L;
-
-	@Override
-	public String toString() {
-		return "PessoaEntity [idPessoa=" + idPessoa + ", nome=" + nome + "]";
-	}
+    @Override
+    public String toString() {
+        return "PessoaEntity [idPessoa=" + idPessoa + ", nome=" + nome + "]";
+    }
 
 }
