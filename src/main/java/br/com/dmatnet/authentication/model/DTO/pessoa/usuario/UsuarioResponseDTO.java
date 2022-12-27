@@ -47,6 +47,7 @@ public class UsuarioResponseDTO extends AbstractPessoaFisicaDTO implements Seria
         return this.perfis;
     }
 
+    @JsonIgnore
     public String getPassword() {
         return this.senha;
     }

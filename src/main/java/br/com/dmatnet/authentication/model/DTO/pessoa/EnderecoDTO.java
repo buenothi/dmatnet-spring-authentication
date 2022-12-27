@@ -37,19 +37,27 @@ public class EnderecoDTO implements Serializable, Cloneable {
     }
 
     public void setLogradouroComplemento(String logradouroComplemento) {
-        this.logradouroComplemento = logradouroComplemento.toUpperCase();
+        if (logradouroComplemento != null) {
+            this.logradouroComplemento = logradouroComplemento.toUpperCase();
+        }
     }
 
     public void setBairro(String bairro) {
-        this.bairro = bairro.toUpperCase();
+        if (bairro != null) {
+            this.bairro = bairro.toUpperCase();
+        }
     }
 
     public void setLogradouroTipo(String logradouroTipo) {
-        this.logradouroTipo = logradouroTipo.toUpperCase();
+        if (logradouroTipo != null) {
+            this.logradouroTipo = logradouroTipo.toUpperCase();
+        }
     }
 
     public void setLogradouroPais(String logradouroPais) {
-        this.logradouroPais = logradouroPais.toUpperCase();
+        if (logradouroPais != null) {
+            this.logradouroPais = logradouroPais.toUpperCase();
+        }
     }
 
     @Override
