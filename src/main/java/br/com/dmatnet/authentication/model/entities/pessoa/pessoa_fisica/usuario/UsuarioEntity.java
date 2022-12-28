@@ -33,8 +33,7 @@ public class UsuarioEntity extends AbstractPessoaFisicaEntity implements Seriali
     private String senha;
     private UUID idUsuarioPai;
     private boolean ativo;
-
-    @ManyToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.EAGER)
     private List<PerfilEntity> perfis;
 
     public UsuarioEntity(

@@ -17,8 +17,6 @@ public class PerfilDTO implements Serializable {
     private static final long serialVersionUID = 2938086839928013787L;
     @NonNull
     private String nome;
-    @JsonBackReference
-    private List<UsuarioRequestDTO> usuarios;
 
     public String getAuthority() {
         return this.nome;

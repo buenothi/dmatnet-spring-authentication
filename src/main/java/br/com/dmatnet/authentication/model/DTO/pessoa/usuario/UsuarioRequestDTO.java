@@ -2,7 +2,6 @@ package br.com.dmatnet.authentication.model.DTO.pessoa.usuario;
 
 import br.com.dmatnet.authentication.model.DTO.pessoa.AbstractPessoaFisicaDTO;
 import br.com.dmatnet.authentication.model.DTO.pessoa.EmailDTO;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -27,8 +26,6 @@ public class UsuarioRequestDTO extends AbstractPessoaFisicaDTO implements Serial
     private String senha;
     private UUID idUsuarioPai;
     private boolean ativo;
-
-    @JsonManagedReference
     private List<PerfilDTO> perfis;
 
     public UsuarioRequestDTO(String nome, LocalDate dataNascimento, Set<EmailDTO> emails, String login, String senha, boolean ativo, List<PerfilDTO> perfis) {

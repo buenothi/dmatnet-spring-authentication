@@ -24,9 +24,6 @@ public class PerfilEntity implements Serializable, GrantedAuthority {
     @Id
     @NonNull
     private String nome;
-    @ManyToMany(mappedBy = "perfis")
-    private List<UsuarioEntity> usuarios;
-
     @Override
     public String getAuthority() {
         return this.nome;

@@ -29,8 +29,6 @@ public class UsuarioResponseDTO extends AbstractPessoaFisicaDTO implements Seria
     private String senha;
     private UUID idUsuarioPai;
     private boolean ativo;
-
-    @JsonManagedReference
     private List<PerfilDTO> perfis;
 
     public UsuarioResponseDTO(String nome, LocalDate dataNascimento, Set<EmailDTO> emails, String login, String senha, boolean ativo, List<PerfilDTO> perfis) {

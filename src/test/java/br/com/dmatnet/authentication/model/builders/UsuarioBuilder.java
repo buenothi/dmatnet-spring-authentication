@@ -20,14 +20,14 @@ public class UsuarioBuilder {
     public UsuarioEntity gerarUsuarioEntityTeste() {
 
         EstadoEntity estado = new EstadoEntity(
-                1L,
+                26,
                 "SP",
                 "São Paulo",
                 null
         );
 
         CidadeEntity cidade = new CidadeEntity(
-                1L,
+                5270,
                 "São Paulo",
                 estado
         );
