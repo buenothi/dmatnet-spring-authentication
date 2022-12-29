@@ -20,9 +20,9 @@ import java.util.Optional;
 import java.util.UUID;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -51,6 +51,7 @@ public class UsuarioControllerTest {
     public void preTest() {
         objectMapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd"));
         this.usuarioEntityMock = this.usuarioBuilder.gerarUsuarioEntityTeste();
+
     }
 
     @Test
@@ -58,14 +59,9 @@ public class UsuarioControllerTest {
 
         String id = UUID.randomUUID().toString();
 
-        when(usuarioService.findUsuarioById(any()))
-                .thenReturn(Optional.ofNullable(usuarioEntityMock));
+        when(usuarioService.findUsuarioById(any())).thenReturn(Optional.ofNullable(usuarioEntityMock));
 
-        mockMvc.perform(get("/autenticacao")
-                        .accept(MediaType.ALL)
-                        .param("id", id))
-                .andDo(print())
-                .andExpect(status().isOk());
+        mockMvc.perform(get("/autenticacao").accept(MediaType.ALL).param("id", id)).andDo(print()).andExpect(status().isOk());
 
     }
 
@@ -76,33 +72,51 @@ public class UsuarioControllerTest {
 
         Optional<UsuarioEntity> usuarioEntityEmpty = Optional.empty();
 
-        when(usuarioService.findUsuarioById(any()))
-                .thenReturn(usuarioEntityEmpty);
+        when(usuarioService.findUsuarioById(any())).thenReturn(usuarioEntityEmpty);
 
-        mockMvc.perform(get("/autenticacao")
-                        .accept(MediaType.ALL)
-                        .param("id", id))
-                .andDo(print())
-                .andExpect(status().isNotFound());
+        mockMvc.perform(get("/autenticacao").accept(MediaType.ALL).param("id", id)).andDo(print()).andExpect(status().isNotFound());
 
     }
 
     @Test
     public void sholdBe_saveNewUser_Success() throws Exception {
 
-        when(usuarioService.save(any()))
-                .thenReturn(usuarioEntityMock);
+        when(usuarioService.save(any())).thenReturn(usuarioEntityMock);
 
-        UsuarioRequestDTO usuarioRequestDTO = usuarioConverter
-                .toUsuarioRequestDTO(usuarioEntityMock);
+        UsuarioRequestDTO usuarioRequestDTO = usuarioConverter.toUsuarioRequestDTO(usuarioEntityMock);
 
-        mockMvc.perform(post("/autenticacao")
-                        .accept(MediaType.APPLICATION_JSON)
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .characterEncoding("UTF-8")
-                        .content(objectMapper.writeValueAsString(usuarioRequestDTO)))
-                .andDo(print())
-                .andExpect(status().isCreated());
+        mockMvc.perform(post("/autenticacao").accept(MediaType.APPLICATION_JSON).contentType(MediaType.APPLICATION_JSON).characterEncoding("UTF-8").content(objectMapper.writeValueAsString(usuarioRequestDTO))).andDo(print()).andExpect(status().isCreated());
+
+    }
+
+    @Test
+    public void sholdBe_deleteUser_Success() throws Exception {
+
+        String id = UUID.randomUUID().toString();
+
+        when(usuarioService.findUsuarioById(any())).thenReturn(Optional.ofNullable(usuarioEntityMock));
+
+        doNothing().when(usuarioService).delete(any());
+
+        UsuarioRequestDTO usuarioRequestDTO = usuarioConverter.toUsuarioRequestDTO(usuarioEntityMock);
+
+        mockMvc.perform(delete("/autenticacao").accept(MediaType.ALL).param("id", id)).andDo(print()).andExpect(status().isOk());
+
+    }
+
+    @Test
+    public void sholdBe_deleteUser_NotFoundUser() throws Exception {
+
+        String id = UUID.randomUUID().toString();
+
+        Optional<UsuarioEntity> usuarioEntityEmpty = Optional.empty();
+
+        when(usuarioService.findUsuarioById(any())).thenReturn(usuarioEntityEmpty);
+
+        UsuarioRequestDTO usuarioRequestDTO = usuarioConverter.toUsuarioRequestDTO(usuarioEntityMock);
+
+        mockMvc.perform(delete("/autenticacao").accept(MediaType.ALL).param("id", id)).andDo(print()).andExpect(status().isNotFound());
+
     }
 
 }

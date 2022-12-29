@@ -25,7 +25,7 @@ public class UsuarioConverter {
         return modelMapper.map(dto, UsuarioEntity.class);
     }
 
-    public UsuarioEntity usuarioResponseToEntity(UsuarioRequestDTO dto) {
+    public UsuarioEntity usuarioResponseToEntity(UsuarioResponseDTO dto) {
         return modelMapper.map(dto, UsuarioEntity.class);
     }
 
