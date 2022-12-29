@@ -61,7 +61,11 @@ public class UsuarioControllerTest {
 
         when(usuarioService.findUsuarioById(any())).thenReturn(Optional.ofNullable(usuarioEntityMock));
 
-        mockMvc.perform(get("/autenticacao").accept(MediaType.ALL).param("id", id)).andDo(print()).andExpect(status().isOk());
+        mockMvc.perform(get("/autenticacao")
+                        .accept(MediaType.ALL)
+                        .param("id", id))
+                .andDo(print())
+                .andExpect(status().isOk());
 
     }
 
@@ -74,7 +78,11 @@ public class UsuarioControllerTest {
 
         when(usuarioService.findUsuarioById(any())).thenReturn(usuarioEntityEmpty);
 
-        mockMvc.perform(get("/autenticacao").accept(MediaType.ALL).param("id", id)).andDo(print()).andExpect(status().isNotFound());
+        mockMvc.perform(get("/autenticacao")
+                        .accept(MediaType.ALL)
+                        .param("id", id))
+                .andDo(print())
+                .andExpect(status().isNotFound());
 
     }
 
@@ -85,7 +93,13 @@ public class UsuarioControllerTest {
 
         UsuarioRequestDTO usuarioRequestDTO = usuarioConverter.toUsuarioRequestDTO(usuarioEntityMock);
 
-        mockMvc.perform(post("/autenticacao").accept(MediaType.APPLICATION_JSON).contentType(MediaType.APPLICATION_JSON).characterEncoding("UTF-8").content(objectMapper.writeValueAsString(usuarioRequestDTO))).andDo(print()).andExpect(status().isCreated());
+        mockMvc.perform(post("/autenticacao")
+                        .accept(MediaType.APPLICATION_JSON)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .characterEncoding("UTF-8")
+                        .content(objectMapper.writeValueAsString(usuarioRequestDTO)))
+                .andDo(print())
+                .andExpect(status().isCreated());
 
     }
 
@@ -94,13 +108,16 @@ public class UsuarioControllerTest {
 
         String id = UUID.randomUUID().toString();
 
-        when(usuarioService.findUsuarioById(any())).thenReturn(Optional.ofNullable(usuarioEntityMock));
+        when(usuarioService.findUsuarioById(any()))
+                .thenReturn(Optional.ofNullable(usuarioEntityMock));
 
         doNothing().when(usuarioService).delete(any());
 
-        UsuarioRequestDTO usuarioRequestDTO = usuarioConverter.toUsuarioRequestDTO(usuarioEntityMock);
-
-        mockMvc.perform(delete("/autenticacao").accept(MediaType.ALL).param("id", id)).andDo(print()).andExpect(status().isOk());
+        mockMvc.perform(delete("/autenticacao")
+                        .accept(MediaType.ALL)
+                        .param("id", id))
+                .andDo(print())
+                .andExpect(status().isOk());
 
     }
 
@@ -111,11 +128,14 @@ public class UsuarioControllerTest {
 
         Optional<UsuarioEntity> usuarioEntityEmpty = Optional.empty();
 
-        when(usuarioService.findUsuarioById(any())).thenReturn(usuarioEntityEmpty);
+        when(usuarioService.findUsuarioById(any()))
+                .thenReturn(usuarioEntityEmpty);
 
-        UsuarioRequestDTO usuarioRequestDTO = usuarioConverter.toUsuarioRequestDTO(usuarioEntityMock);
-
-        mockMvc.perform(delete("/autenticacao").accept(MediaType.ALL).param("id", id)).andDo(print()).andExpect(status().isNotFound());
+        mockMvc.perform(delete("/autenticacao")
+                        .accept(MediaType.ALL)
+                        .param("id", id))
+                .andDo(print())
+                .andExpect(status().isNotFound());
 
     }
 
