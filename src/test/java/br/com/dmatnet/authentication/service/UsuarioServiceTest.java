@@ -21,7 +21,6 @@ import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(SpringExtension.class)
@@ -33,7 +32,7 @@ public class UsuarioServiceTest {
     UsuarioService usuarioService;
     private UsuarioEntity usuario = new UsuarioEntity();
     @Autowired
-    private UsuarioBuilder usuarioBuilder = new UsuarioBuilder();
+    private final UsuarioBuilder usuarioBuilder = new UsuarioBuilder();
 
     @BeforeEach
     public void criarUsuarioMock() {

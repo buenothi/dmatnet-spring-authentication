@@ -3,7 +3,6 @@ package br.com.dmatnet.authentication.model.DTO.pessoa.usuario;
 import br.com.dmatnet.authentication.model.DTO.pessoa.AbstractPessoaFisicaDTO;
 import br.com.dmatnet.authentication.model.DTO.pessoa.EmailDTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -39,35 +38,6 @@ public class UsuarioResponseDTO extends AbstractPessoaFisicaDTO implements Seria
         this.senha = senha;
         this.ativo = ativo;
         this.perfis = perfis;
-    }
-
-    public List getAuthorities() {
-        return this.perfis;
-    }
-
-    @JsonIgnore
-    public String getPassword() {
-        return this.senha;
-    }
-
-    public String getUsername() {
-        return this.login;
-    }
-
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    public boolean isEnabled() {
-        return this.ativo;
     }
 
 }

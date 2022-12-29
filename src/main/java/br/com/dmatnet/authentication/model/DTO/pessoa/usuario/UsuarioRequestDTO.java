@@ -38,32 +38,4 @@ public class UsuarioRequestDTO extends AbstractPessoaFisicaDTO implements Serial
         this.perfis = perfis;
     }
 
-    public List getAuthorities() {
-        return this.perfis;
-    }
-
-    public String getPassword() {
-        return this.senha;
-    }
-
-    public String getUsername() {
-        return this.login;
-    }
-
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    public boolean isEnabled() {
-        return this.ativo;
-    }
-
 }

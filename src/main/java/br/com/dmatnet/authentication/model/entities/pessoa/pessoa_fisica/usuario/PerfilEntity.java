@@ -2,14 +2,12 @@ package br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuari
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 @Table(name = "tbl_perfis")

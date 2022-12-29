@@ -1,11 +1,9 @@
 package br.com.dmatnet.authentication.model.DTO.pessoa.usuario;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.List;
 
 @Getter
 @Setter
