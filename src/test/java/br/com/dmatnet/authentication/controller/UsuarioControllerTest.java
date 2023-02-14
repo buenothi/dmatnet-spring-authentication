@@ -1,10 +1,10 @@
 package br.com.dmatnet.authentication.controller;
 
-import br.com.dmatnet.authentication.model.DTO.pessoa.usuario.UsuarioRequestDTO;
+import br.com.dmatnet.authentication.adapter.dto.usuario.UsuarioRequestDTO;
 import br.com.dmatnet.authentication.model.builders.UsuarioBuilder;
-import br.com.dmatnet.authentication.model.converter.UsuarioConverter;
-import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.UsuarioEntity;
-import br.com.dmatnet.authentication.service.UsuarioService;
+import br.com.dmatnet.authentication.adapter.converter.UsuarioConverter;
+import br.com.dmatnet.authentication.adapter.output.JPA.entity.pessoa_fisica.usuario.UsuarioEntity;
+import br.com.dmatnet.authentication.adapter.security.UsuarioService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

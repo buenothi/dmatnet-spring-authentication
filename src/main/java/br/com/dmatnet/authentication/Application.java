@@ -1,10 +1,10 @@
 package br.com.dmatnet.authentication;
 
-import br.com.dmatnet.authentication.model.entities.pessoa.EmailEntity;
-import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.PerfilEntity;
-import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.UsuarioEntity;
-import br.com.dmatnet.authentication.repository.PerfilRepository;
-import br.com.dmatnet.authentication.repository.UsuarioRepository;
+import br.com.dmatnet.authentication.adapter.output.JPA.entity.EmailEntity;
+import br.com.dmatnet.authentication.adapter.output.JPA.entity.pessoa_fisica.usuario.PerfilEntity;
+import br.com.dmatnet.authentication.adapter.output.JPA.entity.pessoa_fisica.usuario.UsuarioEntity;
+import br.com.dmatnet.authentication.adapter.output.JPA.PerfilRepository;
+import br.com.dmatnet.authentication.adapter.output.JPA.UsuarioRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;

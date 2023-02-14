@@ -1,12 +1,12 @@
 package br.com.dmatnet.authentication.model.builders;
 
-import br.com.dmatnet.authentication.model.entities.pessoa.EmailEntity;
-import br.com.dmatnet.authentication.model.entities.pessoa.EnderecoEntity;
-import br.com.dmatnet.authentication.model.entities.pessoa.EnderecoTipoEntity;
-import br.com.dmatnet.authentication.model.entities.pessoa.cidade.CidadeEntity;
-import br.com.dmatnet.authentication.model.entities.pessoa.cidade.EstadoEntity;
-import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.PessoaFisicaDocumentosEntity;
-import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.UsuarioEntity;
+import br.com.dmatnet.authentication.adapter.output.JPA.entity.EmailEntity;
+import br.com.dmatnet.authentication.adapter.output.JPA.entity.EnderecoEntity;
+import br.com.dmatnet.authentication.adapter.output.JPA.entity.EnderecoTipoEntity;
+import br.com.dmatnet.authentication.adapter.output.JPA.entity.cidade.CidadeEntity;
+import br.com.dmatnet.authentication.adapter.output.JPA.entity.cidade.EstadoEntity;
+import br.com.dmatnet.authentication.adapter.output.JPA.entity.pessoa_fisica.PessoaFisicaDocumentosEntity;
+import br.com.dmatnet.authentication.adapter.output.JPA.entity.pessoa_fisica.usuario.UsuarioEntity;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;

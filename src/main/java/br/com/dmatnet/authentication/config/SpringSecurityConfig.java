@@ -1,9 +1,9 @@
 package br.com.dmatnet.authentication.config;
 
-import br.com.dmatnet.authentication.filter.JWTAuthenticationFilter;
-import br.com.dmatnet.authentication.filter.JWTAuthorizationFilter;
-import br.com.dmatnet.authentication.repository.UsuarioRepository;
-import br.com.dmatnet.authentication.service.UsuarioService;
+import br.com.dmatnet.authentication.adapter.security.filter.JWTAuthenticationFilter;
+import br.com.dmatnet.authentication.adapter.security.filter.JWTAuthorizationFilter;
+import br.com.dmatnet.authentication.adapter.output.JPA.UsuarioRepository;
+import br.com.dmatnet.authentication.adapter.security.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

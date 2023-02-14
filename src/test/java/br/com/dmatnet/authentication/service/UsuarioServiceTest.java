@@ -1,8 +1,9 @@
 package br.com.dmatnet.authentication.service;
 
+import br.com.dmatnet.authentication.adapter.security.UsuarioService;
 import br.com.dmatnet.authentication.model.builders.UsuarioBuilder;
-import br.com.dmatnet.authentication.model.entities.pessoa.pessoa_fisica.usuario.UsuarioEntity;
-import br.com.dmatnet.authentication.repository.UsuarioRepository;
+import br.com.dmatnet.authentication.adapter.output.JPA.entity.pessoa_fisica.usuario.UsuarioEntity;
+import br.com.dmatnet.authentication.adapter.output.JPA.UsuarioRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
