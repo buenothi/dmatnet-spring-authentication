@@ -4,7 +4,7 @@ import br.com.dmatnet.authentication.adapter.dto.usuario.UsuarioRequestDTO;
 import br.com.dmatnet.authentication.adapter.dto.usuario.UsuarioResponseDTO;
 import br.com.dmatnet.authentication.adapter.converter.UsuarioConverter;
 import br.com.dmatnet.authentication.adapter.output.JPA.entity.pessoa_fisica.usuario.UsuarioEntity;
-import br.com.dmatnet.authentication.adapter.security.UsuarioService;
+import br.com.dmatnet.authentication.adapter.security.UsuarioAuthService;
 import jakarta.validation.Valid;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import java.util.UUID;
 public class UsuarioController {
 
     @Autowired
-    private UsuarioService usuarioService;
+    private UsuarioAuthService usuarioAuthService;
 
     @Autowired
     private UsuarioConverter usuarioConverter;
@@ -36,7 +36,7 @@ public class UsuarioController {
 
         usuario.setSenha(encoder.encode(usuario.getSenha()));
 
-        UsuarioEntity usuarioCriado = usuarioService.save(usuarioConverter.usuarioRequestToEntity(usuario));
+        UsuarioEntity usuarioCriado = usuarioAuthService.save(usuarioConverter.usuarioRequestToEntity(usuario));
 
         var uri = ServletUriComponentsBuilder
                 .fromCurrentRequest()
@@ -50,7 +50,7 @@ public class UsuarioController {
     @GetMapping
     @Transactional
     public ResponseEntity<?> getUsuario(@RequestParam(value = "id") String id) {
-        Optional<UsuarioEntity> usuarioEntity = usuarioService.findUsuarioById(UUID.fromString(id));
+        Optional<UsuarioEntity> usuarioEntity = usuarioAuthService.findUsuarioById(UUID.fromString(id));
 
         if (usuarioEntity.isEmpty()) {
             return ResponseEntity.notFound().build();
@@ -65,13 +65,13 @@ public class UsuarioController {
     @Transactional
     public ResponseEntity<?> delete(@RequestParam(value = "id") String id) {
 
-        Optional<UsuarioEntity> usuarioADeletar = usuarioService.findUsuarioById(UUID.fromString(id));
+        Optional<UsuarioEntity> usuarioADeletar = usuarioAuthService.findUsuarioById(UUID.fromString(id));
 
         if (usuarioADeletar.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
 
-        usuarioService.delete(usuarioADeletar.get());
+        usuarioAuthService.delete(usuarioADeletar.get());
 
         return ResponseEntity.ok(null);
     }

@@ -1,6 +1,6 @@
 package br.com.dmatnet.authentication.service;
 
-import br.com.dmatnet.authentication.adapter.security.UsuarioService;
+import br.com.dmatnet.authentication.adapter.security.UsuarioAuthService;
 import br.com.dmatnet.authentication.model.builders.UsuarioBuilder;
 import br.com.dmatnet.authentication.adapter.output.JPA.entity.pessoa_fisica.usuario.UsuarioEntity;
 import br.com.dmatnet.authentication.adapter.output.JPA.UsuarioRepository;
@@ -30,7 +30,7 @@ public class UsuarioServiceTest {
     @MockBean
     UsuarioRepository usuarioRepository;
     @Autowired
-    UsuarioService usuarioService;
+    UsuarioAuthService usuarioAuthService;
     private UsuarioEntity usuario = new UsuarioEntity();
     @Autowired
     private final UsuarioBuilder usuarioBuilder = new UsuarioBuilder();
@@ -47,7 +47,7 @@ public class UsuarioServiceTest {
         when(usuarioRepository.findByLogin(anyString()))
                 .thenReturn(Optional.ofNullable(this.usuario));
 
-        assertEquals(usuarioService.loadUserByUsername("Teste").getUsername(), "Teste");
+        assertEquals(usuarioAuthService.loadUserByUsername("Teste").getUsername(), "Teste");
     }
 
     @Test
@@ -56,7 +56,7 @@ public class UsuarioServiceTest {
                 .thenReturn(Optional.empty());
 
         assertThrows(UsernameNotFoundException.class, () -> {
-            usuarioService.loadUserByUsername("Usuario Inexistente");
+            usuarioAuthService.loadUserByUsername("Usuario Inexistente");
         }, "Usuario não encontrado!");
     }
 
@@ -65,7 +65,7 @@ public class UsuarioServiceTest {
         when(usuarioRepository.save(any()))
                 .thenReturn(usuario);
 
-        assertEquals(usuarioService.save(usuario)
+        assertEquals(usuarioAuthService.save(usuario)
                 .getUsername(), usuario.getUsername());
     }
 
@@ -73,7 +73,7 @@ public class UsuarioServiceTest {
     public void shouldBe_deleteUser_Success() {
         doNothing().when(usuarioRepository).delete(any());
 
-        usuarioService.delete(usuario);
+        usuarioAuthService.delete(usuario);
 
         verify(usuarioRepository, Mockito.times(1))
                 .delete(usuario);
@@ -84,7 +84,7 @@ public class UsuarioServiceTest {
         when(usuarioRepository.findById(any()))
                 .thenReturn(Optional.ofNullable(usuario));
 
-        assertEquals(usuarioService
+        assertEquals(usuarioAuthService
                 .findUsuarioById(UUID.randomUUID()).get().getUsername(), usuario.getUsername());
     }
 
@@ -96,7 +96,7 @@ public class UsuarioServiceTest {
         when(usuarioRepository.findByIdUsuarioPai(any()))
                 .thenReturn(listaUsuarioTeste);
 
-        assertEquals(usuarioService
+        assertEquals(usuarioAuthService
                 .listUsuariosByUsuarioPai(UUID.randomUUID()).size(), 1);
 
     }
@@ -105,8 +105,8 @@ public class UsuarioServiceTest {
     static class usuarioServiceTestConfiguration {
 
         @Bean
-        public UsuarioService usuarioServiceTest() {
-            return new UsuarioService();
+        public UsuarioAuthService usuarioServiceTest() {
+            return new UsuarioAuthService();
         }
 
         @Bean

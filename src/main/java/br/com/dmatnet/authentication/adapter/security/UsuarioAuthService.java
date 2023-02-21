@@ -15,7 +15,7 @@ import java.util.UUID;
 
 @Service
 @Transactional
-public class UsuarioService implements UserDetailsService {
+public class UsuarioAuthService implements UserDetailsService {
 
     @Autowired
     UsuarioRepository usuarioRepository;

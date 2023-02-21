@@ -1,10 +1,10 @@
-package br.com.dmatnet.authentication.controller;
+package br.com.dmatnet.authentication.adapter.input.rest;
 
 import br.com.dmatnet.authentication.adapter.dto.usuario.UsuarioRequestDTO;
 import br.com.dmatnet.authentication.model.builders.UsuarioBuilder;
 import br.com.dmatnet.authentication.adapter.converter.UsuarioConverter;
 import br.com.dmatnet.authentication.adapter.output.JPA.entity.pessoa_fisica.usuario.UsuarioEntity;
-import br.com.dmatnet.authentication.adapter.security.UsuarioService;
+import br.com.dmatnet.authentication.adapter.security.UsuarioAuthService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -31,7 +31,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class UsuarioControllerTest {
 
     @MockBean
-    UsuarioService usuarioService;
+    UsuarioAuthService usuarioAuthService;
 
     @Autowired
     MockMvc mockMvc;
@@ -59,7 +59,7 @@ public class UsuarioControllerTest {
 
         String id = UUID.randomUUID().toString();
 
-        when(usuarioService.findUsuarioById(any())).thenReturn(Optional.ofNullable(usuarioEntityMock));
+        when(usuarioAuthService.findUsuarioById(any())).thenReturn(Optional.ofNullable(usuarioEntityMock));
 
         mockMvc.perform(get("/autenticacao")
                         .accept(MediaType.ALL)
@@ -76,7 +76,7 @@ public class UsuarioControllerTest {
 
         Optional<UsuarioEntity> usuarioEntityEmpty = Optional.empty();
 
-        when(usuarioService.findUsuarioById(any())).thenReturn(usuarioEntityEmpty);
+        when(usuarioAuthService.findUsuarioById(any())).thenReturn(usuarioEntityEmpty);
 
         mockMvc.perform(get("/autenticacao")
                         .accept(MediaType.ALL)
@@ -89,7 +89,7 @@ public class UsuarioControllerTest {
     @Test
     public void sholdBe_saveNewUser_Success() throws Exception {
 
-        when(usuarioService.save(any())).thenReturn(usuarioEntityMock);
+        when(usuarioAuthService.save(any())).thenReturn(usuarioEntityMock);
 
         UsuarioRequestDTO usuarioRequestDTO = usuarioConverter.toUsuarioRequestDTO(usuarioEntityMock);
 
@@ -108,10 +108,10 @@ public class UsuarioControllerTest {
 
         String id = UUID.randomUUID().toString();
 
-        when(usuarioService.findUsuarioById(any()))
+        when(usuarioAuthService.findUsuarioById(any()))
                 .thenReturn(Optional.ofNullable(usuarioEntityMock));
 
-        doNothing().when(usuarioService).delete(any());
+        doNothing().when(usuarioAuthService).delete(any());
 
         mockMvc.perform(delete("/autenticacao")
                         .accept(MediaType.ALL)
@@ -128,7 +128,7 @@ public class UsuarioControllerTest {
 
         Optional<UsuarioEntity> usuarioEntityEmpty = Optional.empty();
 
-        when(usuarioService.findUsuarioById(any()))
+        when(usuarioAuthService.findUsuarioById(any()))
                 .thenReturn(usuarioEntityEmpty);
 
         mockMvc.perform(delete("/autenticacao")

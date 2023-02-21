@@ -3,7 +3,7 @@ package br.com.dmatnet.authentication.config;
 import br.com.dmatnet.authentication.adapter.security.filter.JWTAuthenticationFilter;
 import br.com.dmatnet.authentication.adapter.security.filter.JWTAuthorizationFilter;
 import br.com.dmatnet.authentication.adapter.output.JPA.UsuarioRepository;
-import br.com.dmatnet.authentication.adapter.security.UsuarioService;
+import br.com.dmatnet.authentication.adapter.security.UsuarioAuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -32,7 +32,7 @@ public class SpringSecurityConfig {
             "/autenticacao/auth"
     };
     @Autowired
-    private UsuarioService usuarioService;
+    private UsuarioAuthService usuarioAuthService;
     @Autowired
     private UsuarioRepository repository;
 
@@ -41,7 +41,7 @@ public class SpringSecurityConfig {
 
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
-                .userDetailsService(usuarioService)
+                .userDetailsService(usuarioAuthService)
                 .passwordEncoder(new BCryptPasswordEncoder());
     }
 
