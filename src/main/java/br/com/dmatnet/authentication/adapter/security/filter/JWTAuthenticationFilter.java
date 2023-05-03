@@ -3,6 +3,7 @@ package br.com.dmatnet.authentication.adapter.security.filter;
 import br.com.dmatnet.authentication.adapter.output.JPA.entity.pessoa_fisica.usuario.UsuarioEntity;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.http.HttpServletRequest;
@@ -33,7 +34,12 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     public Authentication attemptAuthentication(HttpServletRequest req,
                                                 HttpServletResponse res) throws AuthenticationException {
         try {
-            UsuarioEntity creds = new ObjectMapper()
+
+            ObjectMapper obj = new ObjectMapper();
+
+            obj.configure(JsonParser.Feature.AUTO_CLOSE_SOURCE, true);
+
+            UsuarioEntity creds = obj
                     .readValue(req.getInputStream(), UsuarioEntity.class);
 
             return authenticationManager.authenticate(

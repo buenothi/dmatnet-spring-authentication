@@ -66,6 +66,8 @@ public class Application {
             return usuarioNovo;
         } catch (DataIntegrityViolationException e) {
             logger.error(e.getMessage());
+            UsuarioEntity usuarioMasterGravado = usuarioRepository.findByLogin("thiago_bueno").get();
+            logger.info(usuarioMasterGravado.getIdPessoa().toString());
         }
 
         return null;
