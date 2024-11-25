@@ -1,4 +1,4 @@
-package br.com.dmatnet.authentication.domain.model;
+package br.com.dmatnet.authentication.cleanArch.domain.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

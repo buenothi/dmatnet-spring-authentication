@@ -1,6 +1,6 @@
 package br.com.dmatnet.authentication.port.input;
 
-import br.com.dmatnet.authentication.domain.model.usuario.Usuario;
+import br.com.dmatnet.authentication.cleanArch.domain.entities.usuario.Usuario;
 
 import java.util.List;
 import java.util.UUID;

@@ -1,6 +1,6 @@
-package br.com.dmatnet.authentication.domain.model;
+package br.com.dmatnet.authentication.cleanArch.domain.entities;
 
-import br.com.dmatnet.authentication.domain.model.cidade.Cidade;
+import br.com.dmatnet.authentication.cleanArch.domain.entities.cidade.Cidade;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

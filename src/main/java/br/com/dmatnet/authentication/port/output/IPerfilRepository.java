@@ -1,6 +1,6 @@
 package br.com.dmatnet.authentication.port.output;
 
-import br.com.dmatnet.authentication.domain.model.usuario.Perfil;
+import br.com.dmatnet.authentication.cleanArch.domain.entities.usuario.Perfil;
 
 import java.util.Optional;
 

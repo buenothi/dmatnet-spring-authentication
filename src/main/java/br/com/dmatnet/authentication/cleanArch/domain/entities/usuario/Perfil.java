@@ -1,4 +1,4 @@
-package br.com.dmatnet.authentication.domain.model.usuario;
+package br.com.dmatnet.authentication.cleanArch.domain.entities.usuario;
 
 import lombok.*;
 

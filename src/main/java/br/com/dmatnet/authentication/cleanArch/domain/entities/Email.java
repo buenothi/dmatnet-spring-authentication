@@ -1,4 +1,4 @@
-package br.com.dmatnet.authentication.domain.model;
+package br.com.dmatnet.authentication.cleanArch.domain.entities;
 
 import jakarta.validation.constraints.Pattern;
 import lombok.*;

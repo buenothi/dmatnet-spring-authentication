@@ -1,4 +1,4 @@
-package br.com.dmatnet.authentication.domain.model.cidade;
+package br.com.dmatnet.authentication.cleanArch.domain.entities.cidade;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.validation.constraints.NotNull;

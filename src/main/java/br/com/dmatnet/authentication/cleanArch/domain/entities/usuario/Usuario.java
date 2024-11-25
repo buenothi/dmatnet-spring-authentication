@@ -1,7 +1,7 @@
-package br.com.dmatnet.authentication.domain.model.usuario;
+package br.com.dmatnet.authentication.cleanArch.domain.entities.usuario;
 
-import br.com.dmatnet.authentication.domain.model.AbstractPessoaFisica;
-import br.com.dmatnet.authentication.domain.model.Email;
+import br.com.dmatnet.authentication.cleanArch.domain.entities.AbstractPessoaFisica;
+import br.com.dmatnet.authentication.cleanArch.domain.entities.Email;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
