@@ -157,7 +157,12 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-                <filtering>false</filtering>
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>
+                        **/*.sql
+                    </exclude>
+                </excludes>
             </resource>
         </resources>
     </build>
