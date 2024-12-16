@@ -1,10 +1,10 @@
 package br.com.dmatnet.authentication.adapter.input.rest;
 
-import br.com.dmatnet.authentication.adapter.dto.usuario.UsuarioRequestDTO;
-import br.com.dmatnet.authentication.adapter.dto.usuario.UsuarioResponseDTO;
-import br.com.dmatnet.authentication.adapter.converter.UsuarioConverter;
+import br.com.dmatnet.authentication.cleanArch.infraestructure.dto.usuario.UsuarioRequestDTO;
+import br.com.dmatnet.authentication.cleanArch.infraestructure.dto.usuario.UsuarioResponseDTO;
+import br.com.dmatnet.authentication.cleanArch.infraestructure.converter.UsuarioConverter;
 import br.com.dmatnet.authentication.adapter.output.JPA.entity.pessoa_fisica.usuario.UsuarioEntity;
-import br.com.dmatnet.authentication.adapter.security.UsuarioAuthService;
+import br.com.dmatnet.authentication.cleanArch.infraestructure.security.UsuarioAuthService;
 import jakarta.validation.Valid;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
