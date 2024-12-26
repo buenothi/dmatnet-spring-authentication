@@ -3,10 +3,8 @@ package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.natu
 import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.EmailEntity;
 import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.naturalPerson.AbstractPersonFisicaEntity;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -20,10 +18,8 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "tbl_usuarios")
-@Getter
-@Setter
-@ToString
-@NoArgsConstructor
+@Data
+@EqualsAndHashCode(callSuper = true)
 public class UserEntity extends AbstractPersonFisicaEntity implements Serializable, UserDetails {
 
     @Serial
