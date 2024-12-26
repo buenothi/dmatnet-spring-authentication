@@ -21,10 +21,10 @@ public class ProfileEntity implements Serializable, GrantedAuthority {
     private static final long serialVersionUID = 2938086839928013787L;
     @Id
     @NonNull
-    private String nome;
+    private String name;
     @Override
     public String getAuthority() {
-        return this.nome;
+        return this.name;
     }
 
 

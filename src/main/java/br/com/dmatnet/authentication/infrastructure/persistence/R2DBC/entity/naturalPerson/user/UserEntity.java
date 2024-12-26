@@ -26,37 +26,37 @@ public class UserEntity extends AbstractPersonFisicaEntity implements Serializab
     private static final long serialVersionUID = 1L;
     @Column(unique = true)
     private String login;
-    private String senha;
-    private UUID idUsuarioPai;
-    private boolean ativo;
+    private String password;
+    private UUID idUserCreator;
+    private boolean activeUser;
     @OneToMany(fetch = FetchType.EAGER)
-    private List<ProfileEntity> perfis;
+    private List<ProfileEntity> profiles;
 
     public UserEntity(
             String nome,
             LocalDate dataNascimento,
             Set<EmailEntity> emails,
             String login,
-            String senha,
-            boolean ativo,
-            List<ProfileEntity> perfis) {
+            String password,
+            boolean activeUser,
+            List<ProfileEntity> profiles) {
         super.setNome(nome);
         super.setDataNascimento(dataNascimento);
         super.setEmails(emails);
         this.login = login;
-        this.senha = senha;
-        this.ativo = ativo;
-        this.perfis = perfis;
+        this.password = password;
+        this.activeUser = activeUser;
+        this.profiles = profiles;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return this.perfis;
+        return this.profiles;
     }
 
     @Override
     public String getPassword() {
-        return this.senha;
+        return this.password;
     }
 
     @Override
@@ -81,7 +81,7 @@ public class UserEntity extends AbstractPersonFisicaEntity implements Serializab
 
     @Override
     public boolean isEnabled() {
-        return this.ativo;
+        return this.activeUser;
     }
 
 }

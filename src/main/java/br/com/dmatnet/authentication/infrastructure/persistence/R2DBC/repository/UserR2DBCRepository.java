@@ -3,8 +3,8 @@ package br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.repositor
 import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.naturalPerson.user.UserEntity;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
+import reactor.core.publisher.Flux;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -13,6 +13,6 @@ public interface UserR2DBCRepository extends ReactiveCrudRepository<UserEntity, 
 
     Optional<UserEntity> findByLogin(String login);
 
-    List<UserEntity> findByIdUsuarioPai(UUID idUsuarioPai);
+    Flux<UserEntity> findByIdUserCreator(UUID idUserCreator);
 
 }

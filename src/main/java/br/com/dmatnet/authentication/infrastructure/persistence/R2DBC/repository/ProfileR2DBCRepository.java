@@ -7,6 +7,6 @@ import java.util.Optional;
 
 public interface ProfileR2DBCRepository extends R2dbcRepository<ProfileEntity, String> {
 
-    Optional<ProfileEntity> findByNome(String nome);
+    Optional<ProfileEntity> findByName(String name);
 
 }
