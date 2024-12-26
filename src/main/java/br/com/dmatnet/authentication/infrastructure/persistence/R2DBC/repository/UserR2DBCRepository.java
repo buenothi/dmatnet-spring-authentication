@@ -1,4 +1,4 @@
-package br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.repository;
+package br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.repository;
 
 import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.naturalPerson.user.UserEntity;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Repository
-public interface UserRepository extends ReactiveCrudRepository<UserEntity, UUID> {
+public interface UserR2DBCRepository extends ReactiveCrudRepository<UserEntity, UUID> {
 
     Optional<UserEntity> findByLogin(String login);
 

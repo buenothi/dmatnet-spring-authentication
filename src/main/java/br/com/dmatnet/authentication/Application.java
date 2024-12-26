@@ -3,8 +3,8 @@ package br.com.dmatnet.authentication;
 import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.EmailEntity;
 import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.naturalPerson.user.ProfileEntity;
 import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.naturalPerson.user.UserEntity;
-import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.repository.ProfileRepository;
-import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.repository.UserRepository;
+import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.repository.ProfileR2DBCRepository;
+import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.repository.UserR2DBCRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -32,8 +32,8 @@ public class Application {
 
     @Bean
     public Mono<UserEntity> cadastrarUsuarioMaster (
-            UserRepository userRepository,
-            ProfileRepository profileRepository) {
+            UserR2DBCRepository userR2DBCRepository,
+            ProfileR2DBCRepository profileR2DBCRepository) {
 
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
@@ -42,7 +42,7 @@ public class Application {
         );
 
         try {
-            profileRepository.save(perfilMaster);
+            profileR2DBCRepository.save(perfilMaster);
         } catch (DataIntegrityViolationException e) {
             logger.error(e.getMessage());
         }
@@ -62,10 +62,10 @@ public class Application {
         );
 
         try {
-            return userRepository.save(usuarioMaster);
+            return userR2DBCRepository.save(usuarioMaster);
         } catch (DataIntegrityViolationException e) {
             logger.error(e.getMessage());
-            UserEntity usuarioMasterGravado = userRepository.findByLogin("thiago_bueno").get();
+            UserEntity usuarioMasterGravado = userR2DBCRepository.findByLogin("thiago_bueno").get();
             logger.info(usuarioMasterGravado.getIdPessoa().toString());
         }
 
