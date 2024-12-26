@@ -1,6 +1,6 @@
-package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.repository;
+package br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.repository;
 
-import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.naturalPerson.user.UserEntity;
+import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.naturalPerson.user.UserEntity;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
 

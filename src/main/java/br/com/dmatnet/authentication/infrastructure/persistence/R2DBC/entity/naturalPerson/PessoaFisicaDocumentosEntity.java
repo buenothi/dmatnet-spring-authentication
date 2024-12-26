@@ -1,4 +1,4 @@
-package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.naturalPerson;
+package br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.naturalPerson;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Temporal;

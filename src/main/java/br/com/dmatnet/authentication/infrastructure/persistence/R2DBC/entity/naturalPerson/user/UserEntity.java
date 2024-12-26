@@ -1,7 +1,7 @@
-package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.naturalPerson.user;
+package br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.naturalPerson.user;
 
-import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.EmailEntity;
-import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.naturalPerson.AbstractPersonFisicaEntity;
+import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.EmailEntity;
+import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.naturalPerson.AbstractPersonFisicaEntity;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

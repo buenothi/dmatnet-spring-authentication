@@ -1,4 +1,4 @@
-package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.city;
+package br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.city;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

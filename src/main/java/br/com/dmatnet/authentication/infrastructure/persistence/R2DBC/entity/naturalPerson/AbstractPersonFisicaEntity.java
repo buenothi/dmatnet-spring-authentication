@@ -1,6 +1,6 @@
-package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.naturalPerson;
+package br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.naturalPerson;
 
-import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.AbstractPersonEntity;
+import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.AbstractPersonEntity;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
