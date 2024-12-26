@@ -1,24 +1,11 @@
 package br.com.dmatnet.authentication.domain.person.abstractPerson;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import java.io.Serial;
 import java.io.Serializable;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-public class AddressType implements Serializable {
-
-	private int idAddressName;
-	
-	private String addressAcronym;
-
-	private String addressName;
+public record AddressType(int idAddressName,
+						  String addressAcronym,
+						  String addressName) implements Serializable {
 
 	@Serial
     private static final long serialVersionUID = 1L;

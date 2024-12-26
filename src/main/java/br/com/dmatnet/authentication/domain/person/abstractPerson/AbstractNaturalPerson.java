@@ -1,15 +1,16 @@
 package br.com.dmatnet.authentication.domain.person.abstractPerson;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.SuperBuilder;
 
 import java.io.Serial;
-import java.io.Serializable;
 import java.time.LocalDate;
 
-@Getter
-@Setter
-public abstract class AbstractNaturalPerson extends AbstractPerson implements Serializable {
+@Data
+@EqualsAndHashCode(callSuper = true)
+@SuperBuilder
+public abstract class AbstractNaturalPerson extends AbstractPerson {
 
     @Serial
     private static final long serialVersionUID = 0;

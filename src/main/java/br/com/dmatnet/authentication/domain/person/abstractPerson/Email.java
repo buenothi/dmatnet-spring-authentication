@@ -6,18 +6,14 @@ import lombok.*;
 import java.io.Serial;
 import java.io.Serializable;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@RequiredArgsConstructor
+@Data
+@Builder
 public class Email implements Serializable, Cloneable, Comparable<Email> {
 
     @Serial
     private static final long serialVersionUID = 1L;
     private long idEmail;
     @Pattern(regexp = "^[_A-Za-z\\d-+]+(\\.[_A-Za-z\\d-]+)*@[A-Za-z\\d-]+(\\.[A-Za-z\\d]+)*(\\.[A-Za-z]{2,})$")
-    @NonNull
     private String email;
     private boolean isMainEmail;
 

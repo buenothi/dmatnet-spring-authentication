@@ -1,21 +1,25 @@
-package br.com.dmatnet.authentication.domain.person.abstractPerson;
+package br.com.dmatnet.authentication.infrastructure.dto;
 
-import br.com.dmatnet.authentication.domain.city.City;
-import lombok.Builder;
-import lombok.Data;
+import br.com.dmatnet.authentication.infrastructure.dto.city.CItyDTO;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-@Data
-@Builder
-public class Address implements Serializable, Cloneable {
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class AddressDTO implements Serializable, Cloneable {
 
     @Serial
     private static final long serialVersionUID = 1L;
     private long idAddress;
-    private AddressType eSocialAddressType;// conforme tabela 20 do eSocial
+    private AddressTypeDTO eSocialAddressType;// conforme tabela 20 do eSocial
     private String addressName;
     private int addressNumber;
     private String addressComplement;
@@ -24,7 +28,7 @@ public class Address implements Serializable, Cloneable {
     private String postOfficeBox;
     private LocalDate startAddressDate;
     private LocalDate endAddressDate;
-    private City city;
+    private CItyDTO city;
     private String addressCountry;
 
     public void setAddressName(String addressName) {
@@ -50,7 +54,7 @@ public class Address implements Serializable, Cloneable {
     }
 
     @Override
-    public Address clone() throws CloneNotSupportedException {
-        return (Address) super.clone();
+    public AddressDTO clone() throws CloneNotSupportedException {
+        return (AddressDTO) super.clone();
     }
 }

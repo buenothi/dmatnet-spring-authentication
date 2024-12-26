@@ -1,7 +1,6 @@
-package br.com.dmatnet.authentication.domain.person.abstractPerson;
+package br.com.dmatnet.authentication.infrastructure.dto;
 
 import lombok.Data;
-import lombok.experimental.SuperBuilder;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -10,16 +9,15 @@ import java.util.Set;
 import java.util.UUID;
 
 @Data
-@SuperBuilder
-public abstract class AbstractPerson implements Serializable {
+public abstract class AbstractPersonDTO implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
     private UUID idPerson;
     private String name;
-    private Set<Address> addresses;
-    private Set<Telephone> telephones;
-    private Set<Email> emails;
+    private Set<AddressDTO> addresses;
+    private Set<TelephoneDTO> telephones;
+    private Set<EmailDTO> emails;
     private LocalDateTime registerPersonDate;
 
 }

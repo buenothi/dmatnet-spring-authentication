@@ -1,0 +1,58 @@
+server:
+  servlet:
+    context-path: /dmatnet-auth
+
+spring:
+  application:
+    name: dmatnet-authentication
+  # JPA
+  jpa:
+    hibernate:
+      ddl-auto: update
+    datasource:
+      url: jdbc:mysql://localhost:3306/dbauthentication
+    show-sql: true
+    defer-datasource-initialization: true
+  datasource:
+    username: root
+    password: Tgb68789475
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:
+    init:
+      mode: always
+    platform: mysql
+
+  # JWT
+jwt:
+  expiration: 900000
+  signup:
+    url: /autenticacao/auth
+
+  # Actuator
+management:
+  endpoint:
+    health:
+      show-details: always
+  prometheus:
+    enabled: true
+  web:
+    exposure:
+      include: prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    enable:
+      jvm: true
+    tags:
+      application: dmatnet-authentication
+
+  # Actuator - Info
+info:
+  app:
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+    encoding: @project.build.sourceEncoding@
+    java:
+      version: @java.version@

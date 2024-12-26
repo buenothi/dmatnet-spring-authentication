@@ -1,10 +1,10 @@
 package br.com.dmatnet.authentication;
 
-import br.com.dmatnet.authentication.infrastructure.persistence.entity.EmailEntity;
-import br.com.dmatnet.authentication.infrastructure.persistence.entity.pessoa_fisica.usuario.PerfilEntity;
-import br.com.dmatnet.authentication.infrastructure.persistence.entity.pessoa_fisica.usuario.UsuarioEntity;
-import br.com.dmatnet.authentication.infrastructure.persistence.repository.PerfilRepository;
-import br.com.dmatnet.authentication.infrastructure.persistence.repository.UsuarioRepository;
+import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.EmailEntity;
+import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.naturalPerson.user.ProfileEntity;
+import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.naturalPerson.user.UserEntity;
+import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.repository.ProfileRepository;
+import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import reactor.core.publisher.Mono;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -30,23 +31,23 @@ public class Application {
     }
 
     @Bean
-    public UsuarioEntity cadastrarUsuarioMaster (
-            UsuarioRepository usuarioRepository,
-            PerfilRepository perfilRepository) {
+    public Mono<UserEntity> cadastrarUsuarioMaster (
+            UserRepository userRepository,
+            ProfileRepository profileRepository) {
 
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
-        PerfilEntity perfilMaster = new PerfilEntity(
+        ProfileEntity perfilMaster = new ProfileEntity(
                 "master"
         );
 
         try {
-            perfilRepository.save(perfilMaster);
+            profileRepository.save(perfilMaster);
         } catch (DataIntegrityViolationException e) {
             logger.error(e.getMessage());
         }
 
-        UsuarioEntity usuarioMaster = new UsuarioEntity(
+        UserEntity usuarioMaster = new UserEntity(
                 "Thiago Gonçalves Bueno",
                 LocalDate.parse("1983-02-16"),
                 new HashSet<>(Collections.singleton(
@@ -61,12 +62,10 @@ public class Application {
         );
 
         try {
-            UsuarioEntity usuarioNovo = usuarioRepository.save(usuarioMaster);
-            logger.info(usuarioNovo.getIdPessoa().toString());
-            return usuarioNovo;
+            return userRepository.save(usuarioMaster);
         } catch (DataIntegrityViolationException e) {
             logger.error(e.getMessage());
-            UsuarioEntity usuarioMasterGravado = usuarioRepository.findByLogin("thiago_bueno").get();
+            UserEntity usuarioMasterGravado = userRepository.findByLogin("thiago_bueno").get();
             logger.info(usuarioMasterGravado.getIdPessoa().toString());
         }
 

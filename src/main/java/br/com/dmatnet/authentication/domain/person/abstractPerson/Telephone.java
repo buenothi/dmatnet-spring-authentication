@@ -1,15 +1,12 @@
 package br.com.dmatnet.authentication.domain.person.abstractPerson;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serial;
 import java.io.Serializable;
 
-@Getter
-@Setter
-@NoArgsConstructor
+@Data
+@Builder
 public class Telephone implements Serializable, Cloneable, Comparable<Telephone> {
 
     @Serial

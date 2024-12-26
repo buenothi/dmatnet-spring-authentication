@@ -2,16 +2,16 @@ package br.com.dmatnet.authentication.domain.person.user;
 
 import br.com.dmatnet.authentication.domain.person.abstractPerson.AbstractNaturalPerson;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@ToString
+@Data
+@EqualsAndHashCode(callSuper = true)
+@SuperBuilder
 public class User extends AbstractNaturalPerson implements Serializable {
 
     @Serial
