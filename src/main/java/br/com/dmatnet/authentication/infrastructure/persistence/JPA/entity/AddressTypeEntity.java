@@ -1,4 +1,4 @@
-package br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity;
+package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

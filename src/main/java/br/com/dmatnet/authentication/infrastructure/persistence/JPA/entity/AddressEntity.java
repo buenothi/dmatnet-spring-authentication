@@ -1,6 +1,6 @@
-package br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity;
+package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity;
 
-import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.city.CityEntity;
+import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.city.CityEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

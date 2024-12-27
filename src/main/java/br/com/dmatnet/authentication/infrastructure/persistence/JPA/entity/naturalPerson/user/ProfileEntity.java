@@ -1,4 +1,4 @@
-package br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.naturalPerson.user;
+package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.naturalPerson.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

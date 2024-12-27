@@ -1,11 +1,9 @@
-package br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.city;
+package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.city;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.io.Serial;
 import java.io.Serializable;

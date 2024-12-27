@@ -3,9 +3,8 @@ package br.com.dmatnet.authentication.infrastructure.converter;
 import br.com.dmatnet.authentication.domain.person.user.User;
 import br.com.dmatnet.authentication.infrastructure.dto.user.UserRequestDTONatural;
 import br.com.dmatnet.authentication.infrastructure.dto.user.UserResponseDTONatural;
-import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.naturalPerson.user.UserEntity;
+import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.naturalPerson.user.UserEntity;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
