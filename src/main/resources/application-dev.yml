@@ -11,14 +11,14 @@ spring:
     show-sql: true
     defer-datasource-initialization: true
   datasource:
-    url: jdbc:mysql://localhost:3306/dbauthentication
+    url: jdbc:mysql://localhost:3306/dbauthentication?useUnicode=true&characterEncoding=UTF-8
     username: root
     password: Tgb68789475
     driver-class-name: com.mysql.cj.jdbc.Driver
   sql:
     init:
       mode: always
-    platform: mysql
+      platform: mysql
   
   # JWT
 jwt:
