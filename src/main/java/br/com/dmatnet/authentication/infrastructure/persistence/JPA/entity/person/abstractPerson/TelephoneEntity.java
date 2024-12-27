@@ -1,18 +1,14 @@
-package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity;
+package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.person.abstractPerson;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
 import java.io.Serial;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "tbl_telefone")
-@Getter
-@Setter
-@NoArgsConstructor
+@Table(name = "tbl_telephone")
+@Data
 public class TelephoneEntity implements Serializable, Cloneable, Comparable<TelephoneEntity> {
 
     @Serial

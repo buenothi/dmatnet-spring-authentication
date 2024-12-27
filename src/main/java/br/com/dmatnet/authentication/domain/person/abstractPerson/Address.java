@@ -27,28 +27,6 @@ public class Address implements Serializable, Cloneable {
     private City city;
     private String addressCountry;
 
-    public void setAddressName(String addressName) {
-        this.addressName = addressName.toUpperCase();
-    }
-
-    public void setAddressComplement(String AddressComplement) {
-        if (AddressComplement != null) {
-            this.addressComplement = AddressComplement.toUpperCase();
-        }
-    }
-
-    public void setNeighborhood(String neighborhood) {
-        if (neighborhood != null) {
-            this.neighborhood = neighborhood.toUpperCase();
-        }
-    }
-
-    public void setAddressCountry(String addressCountry) {
-        if (addressCountry != null) {
-            this.addressCountry = addressCountry.toUpperCase();
-        }
-    }
-
     @Override
     public Address clone() throws CloneNotSupportedException {
         return (Address) super.clone();

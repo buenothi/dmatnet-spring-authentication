@@ -1,8 +1,8 @@
-package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity;
+package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.person.abstractPerson;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;
-import lombok.*;
+import lombok.Data;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -19,7 +19,7 @@ public class EmailEntity implements Serializable, Cloneable, Comparable<EmailEnt
     private long idEmail;
     @Pattern(regexp = "^[_A-Za-z\\d-+]+(\\.[_A-Za-z\\d-]+)*@[A-Za-z\\d-]+(\\.[A-Za-z\\d]+)*(\\.[A-Za-z]{2,})$")
     private final String email;
-    private final boolean isEmailPrincipal;
+    private final boolean isMainEmail;
 
     @Override
     protected EmailEntity clone() throws CloneNotSupportedException {

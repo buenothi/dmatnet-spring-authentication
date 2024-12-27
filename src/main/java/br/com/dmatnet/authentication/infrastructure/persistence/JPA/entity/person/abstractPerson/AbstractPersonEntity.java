@@ -1,10 +1,9 @@
-package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity;
+package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.person.abstractPerson;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Builder;
+import lombok.Data;
+import lombok.experimental.SuperBuilder;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -13,12 +12,10 @@ import java.util.Set;
 import java.util.UUID;
 
 @Entity
-@Table(name = "tbl_Pessoa")
+@Table(name = "tbl_person")
 @Inheritance(strategy = InheritanceType.JOINED)
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
+@SuperBuilder
 public abstract class AbstractPersonEntity implements Serializable {
 
     @Serial
@@ -26,23 +23,18 @@ public abstract class AbstractPersonEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(columnDefinition = "BINARY(16)")
-    private UUID idPessoa;
-    private String nome;
+    private UUID idPerson;
+    private String name;
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE})
-    @JoinColumn(name = "PESSOA_ID")
-    private Set<AddressEntity> enderecos;
+    @JoinColumn(name = "PERSON_ID")
+    private Set<AddressEntity> addresses;
     @OneToMany(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "PESSOA_ID")
-    private Set<TelephoneEntity> telefones;
+    @JoinColumn(name = "PERSON_ID")
+    private Set<TelephoneEntity> telephones;
     @OneToMany(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "PESSOA_ID")
+    @JoinColumn(name = "PERSON_ID")
     private Set<EmailEntity> emails;
     @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime dataCadastroPessoa;
-
-    @Override
-    public String toString() {
-        return "PessoaEntity [idPessoa=" + idPessoa + ", nome=" + nome + "]";
-    }
+    private LocalDateTime registerPersonDate;
 
 }
