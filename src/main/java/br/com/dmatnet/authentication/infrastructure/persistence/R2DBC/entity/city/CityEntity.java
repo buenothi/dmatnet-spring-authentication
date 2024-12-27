@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serial;
@@ -11,8 +12,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name="tbl_cidades")
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 public class CityEntity implements Serializable {
 
 	@Id

@@ -9,11 +9,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "tbl_email")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@RequiredArgsConstructor
+@Data
 public class EmailEntity implements Serializable, Cloneable, Comparable<EmailEntity> {
 
     @Serial
@@ -22,10 +18,8 @@ public class EmailEntity implements Serializable, Cloneable, Comparable<EmailEnt
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idEmail;
     @Pattern(regexp = "^[_A-Za-z\\d-+]+(\\.[_A-Za-z\\d-]+)*@[A-Za-z\\d-]+(\\.[A-Za-z\\d]+)*(\\.[A-Za-z]{2,})$")
-    @NonNull
-    private String email;
-    @NonNull
-    private boolean isEmailPrincipal;
+    private final String email;
+    private final boolean isEmailPrincipal;
 
     @Override
     protected EmailEntity clone() throws CloneNotSupportedException {

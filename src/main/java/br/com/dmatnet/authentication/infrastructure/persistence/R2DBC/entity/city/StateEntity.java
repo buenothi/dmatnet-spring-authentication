@@ -3,10 +3,7 @@ package br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.ci
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -14,13 +11,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "tbl_estados")
-@Getter
-@Setter
-@NamedQueries({
+@Data
+/*@NamedQueries({
         @NamedQuery(name = "Estados.listarTodasCidadesPorEstado",
-                query = "SELECT cid FROM CidadeEntity cid WHERE cid.estado=:estado")})
-@AllArgsConstructor
-@NoArgsConstructor
+                query = "SELECT cid FROM CidadeEntity cid WHERE cid.estado=:estado")})*/
 public class StateEntity implements Serializable {
 
     @Serial
