@@ -4,10 +4,10 @@ import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.perso
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.io.Serial;
-import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 
@@ -16,7 +16,8 @@ import java.util.UUID;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @SuperBuilder
-public class UserEntity extends AbstractNaturalPersonEntity implements Serializable {
+@NoArgsConstructor
+public class UserEntity extends AbstractNaturalPersonEntity{
 
     @Serial
     private static final long serialVersionUID = 1L;

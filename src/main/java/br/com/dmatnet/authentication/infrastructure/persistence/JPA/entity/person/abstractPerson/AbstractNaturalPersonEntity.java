@@ -2,20 +2,20 @@ package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.pers
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.MappedSuperclass;
-import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.io.Serial;
-import java.io.Serializable;
 import java.time.LocalDate;
 
 @MappedSuperclass
 @Data
 @EqualsAndHashCode(callSuper = true)
 @SuperBuilder
-public abstract class AbstractNaturalPersonEntity extends AbstractPersonEntity implements Serializable {
+@NoArgsConstructor
+public abstract class AbstractNaturalPersonEntity extends AbstractPersonEntity {
 
     @Serial
     private static final long serialVersionUID = -6151998038625475024L;

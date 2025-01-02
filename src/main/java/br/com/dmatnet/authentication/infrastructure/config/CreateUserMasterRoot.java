@@ -1,65 +1,58 @@
-/*
 package br.com.dmatnet.authentication.infrastructure.config;
 
-import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.EmailEntity;
-import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.naturalPerson.user.ProfileEntity;
-import br.com.dmatnet.authentication.infrastructure.persistence.R2DBC.entity.naturalPerson.user.UserEntity;
+import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.person.abstractPerson.EmailEntity;
+import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.person.user.ProfileEntity;
+import br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.person.user.UserEntity;
+import br.com.dmatnet.authentication.infrastructure.persistence.JPA.repository.ProfileJpaRepository;
+import br.com.dmatnet.authentication.infrastructure.persistence.JPA.repository.UserJpaRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.dao.DataIntegrityViolationException;
-import reactor.core.publisher.Mono;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 
 @Slf4j
-//@Configuration
+@Configuration
 public class CreateUserMasterRoot {
 
-    private Logger logger;
-
     @Bean
-    public Mono<UserEntity> cadastrarUsuarioMaster (
-            UserR2DBCRepository userR2DBCRepository,
-            ProfileR2DBCRepository profileR2DBCRepository) {
+    public UserEntity cadastrarUsuarioMaster (
+            UserJpaRepository userRepository,
+            ProfileJpaRepository profileRepository) {
 
-        ProfileEntity perfilMaster = new ProfileEntity(
-                "master"
-        );
+        ProfileEntity perfilMaster = ProfileEntity.builder()
+                .name("master")
+                .build();
 
         try {
-            profileR2DBCRepository.save(perfilMaster);
+            profileRepository.save(perfilMaster);
         } catch (DataIntegrityViolationException e) {
-            logger.error(e.getMessage());
+            log.error(e.getMessage());
         }
 
-        UserEntity usuarioMaster = new UserEntity(
-                "Thiago Gonçalves Bueno",
-                LocalDate.parse("1983-02-16"),
-                new HashSet<>(Collections.singleton(
-                        new EmailEntity(
-                                "bueno_thiago@outlook.com",
-                                true)
-                )),
-                "thiago_bueno",
-                "Tgb#6878",
-                true,
-                new ArrayList<>(Collections.singleton(perfilMaster))
-        );
+        UserEntity usuarioMaster = UserEntity
+                .builder()
+                .name("Thiago Gonçalves Bueno")
+                .birthDate(LocalDate.parse("1983-02-16"))
+                .emails(Collections.singleton((new EmailEntity("bueno_thiago@outlook.com", true))))
+                .login("thiago_bueno")
+                .password("Tgb#6878")
+                .activeUser(true)
+                .profiles(new ArrayList<>(Collections.singleton(perfilMaster)))
+                .build();
 
         try {
-            return userR2DBCRepository.save(usuarioMaster);
+            return userRepository.save(usuarioMaster);
         } catch (DataIntegrityViolationException e) {
-            logger.error(e.getMessage());
-            UserEntity usuarioMasterGravado = userR2DBCRepository.findByLogin("thiago_bueno").get();
-            logger.info(usuarioMasterGravado.getIdPessoa().toString());
+            log.error(e.getMessage());
+            UserEntity usuarioMasterGravado = userRepository.findByLogin("thiago_bueno").orElse(null);
+            assert usuarioMasterGravado != null;
+            log.info("O usuário master já foi criado sob o id {}", usuarioMasterGravado.getIdPerson().toString());
         }
 
         return null;
     }
 }
-*/

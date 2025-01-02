@@ -1,8 +1,8 @@
 package br.com.dmatnet.authentication.infrastructure.persistence.JPA.entity.person.abstractPerson;
 
 import jakarta.persistence.*;
-import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.io.Serial;
@@ -16,6 +16,7 @@ import java.util.UUID;
 @Inheritance(strategy = InheritanceType.JOINED)
 @Data
 @SuperBuilder
+@NoArgsConstructor
 public abstract class AbstractPersonEntity implements Serializable {
 
     @Serial
