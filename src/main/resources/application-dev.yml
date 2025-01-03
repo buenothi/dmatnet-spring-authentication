@@ -10,6 +10,7 @@ spring:
       ddl-auto: update
     show-sql: true
     defer-datasource-initialization: true
+    open-in-view: false
   datasource:
     url: jdbc:mysql://localhost:3306/dbauthentication?useUnicode=true&characterEncoding=UTF-8
     username: root
@@ -66,13 +67,13 @@ management:
       jvm: true
     tags:
       application: dmatnet-authentication
-  
-  # Actuator - Info
-#info:
-#  app:
-#    name: @project.name@
-#    description: @project.description@
-#    version: @project.version@
-#    encoding: @project.build.sourceEncoding@
-#    java:
-#      version: @java.version@
+
+# Actuator - Info
+info:
+  app:
+    name: "@project.name@"
+    description: "@project.description@"
+    version: "@project.version@"
+    encoding: "@project.build.sourceEncoding@"
+    java:
+      version: "@java.version@"
