@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -17,6 +18,12 @@ import java.util.Collections;
 @Slf4j
 @Configuration
 public class CreateUserMasterRoot {
+
+    private final PasswordEncoder passwordEncoder;
+
+    public CreateUserMasterRoot(PasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @Bean
     public UserEntity cadastrarUsuarioMaster (
@@ -39,7 +46,7 @@ public class CreateUserMasterRoot {
                 .birthDate(LocalDate.parse("1983-02-16"))
                 .emails(Collections.singleton((new EmailEntity("bueno_thiago@outlook.com", true))))
                 .login("thiago_bueno")
-                .password("Tgb#6878")
+                .password(passwordEncoder.encode("Tgb#6878"))
                 .activeUser(true)
                 .profiles(new ArrayList<>(Collections.singleton(perfilMaster)))
                 .build();

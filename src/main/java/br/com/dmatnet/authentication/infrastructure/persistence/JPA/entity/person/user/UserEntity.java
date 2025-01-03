@@ -6,8 +6,11 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.io.Serial;
+import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
@@ -17,7 +20,7 @@ import java.util.UUID;
 @EqualsAndHashCode(callSuper = true)
 @SuperBuilder
 @NoArgsConstructor
-public class UserEntity extends AbstractNaturalPersonEntity{
+public class UserEntity extends AbstractNaturalPersonEntity implements UserDetails {
 
     @Serial
     private static final long serialVersionUID = 1L;
@@ -29,4 +32,13 @@ public class UserEntity extends AbstractNaturalPersonEntity{
     @OneToMany(fetch = FetchType.EAGER)
     private List<ProfileEntity> profiles;
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of();
+    }
+
+    @Override
+    public String getUsername() {
+        return this.login;
+    }
 }
