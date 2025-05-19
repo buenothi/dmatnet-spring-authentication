@@ -48,6 +48,7 @@ public class SecurityFilterConfig {
         this.repository = repository;
     }
 
+    //Configuração do Spring Security
     @Bean
     @Order(1)
     public SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http)
@@ -73,7 +74,6 @@ public class SecurityFilterConfig {
                                 new MediaTypeRequestMatcher(MediaType.TEXT_HTML)
                         )
                 );
-
         return http.build();
     }
 
@@ -104,6 +104,7 @@ public class SecurityFilterConfig {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 
+    //bean para registro de cliente autorizado a acessar a autenticação
     @Bean
     public RegisteredClientRepository registeredClientRepository() {
         RegisteredClient oidcClient = RegisteredClient.withId(UUID.randomUUID().toString())
@@ -122,6 +123,7 @@ public class SecurityFilterConfig {
         return new InMemoryRegisteredClientRepository(oidcClient);
     }
 
+    //bean para criaçào do token store
     @Bean
     public JWKSource<SecurityContext> jwkSource() {
         KeyPair keyPair = generateRsaKey();
@@ -153,6 +155,7 @@ public class SecurityFilterConfig {
         return OAuth2AuthorizationServerConfiguration.jwtDecoder(jwkSource);
     }
 
+    //bean de configuração do authorization servico como endpoints, tokens, expirations etc
     @Bean
     public AuthorizationServerSettings authorizationServerSettings() {
         return AuthorizationServerSettings.builder().build();
